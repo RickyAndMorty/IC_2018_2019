@@ -1,0 +1,92 @@
+# depslib dependency file v1.0
+1535294480 source:c:\users\ricardo santos\desktop\celular\backup ricardo\desktop\utfpr\i_c_2018-2019\pso_02\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<rede.h>
+	<pso.h>
+	<imprimir.h>
+	<math.h>
+
+1535251449 source:c:\users\ricardo santos\desktop\celular\backup ricardo\desktop\utfpr\i_c_2018-2019\pso_02\src\rede.cpp
+	"rede.h"
+	<math.h>
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+
+1535242841 c:\users\ricardo santos\desktop\celular\backup ricardo\desktop\utfpr\i_c_2018-2019\pso_02\include\rede.h
+	"alloca.h"
+
+1535301640 source:c:\users\ricardo santos\desktop\celular\backup ricardo\desktop\utfpr\i_c_2018-2019\pso_02\src\alloca.cpp
+	"alloca.h"
+	<stdio.h>
+	<stdlib.h>
+
+1535301670 c:\users\ricardo santos\desktop\celular\backup ricardo\desktop\utfpr\i_c_2018-2019\pso_02\include\alloca.h
+
+1535209153 source:c:\users\ricardo santos\desktop\celular\backup ricardo\desktop\utfpr\i_c_2018-2019\pso_02\src\lll.cpp
+	"lll.h"
+
+1535209153 c:\users\ricardo santos\desktop\celular\backup ricardo\desktop\utfpr\i_c_2018-2019\pso_02\include\lll.h
+
+1535209287 c:\users\ricardo santos\desktop\celular\backup ricardo\desktop\utfpr\i_c_2018-2019\pso_02\include\imprimir.h
+
+1535294330 source:c:\users\ricardo santos\desktop\celular\backup ricardo\desktop\utfpr\i_c_2018-2019\pso_02\src\imprimir.cpp
+	"imprimir.h"
+	<iostream>
+	<math.h>
+
+1535293380 c:\users\ricardo santos\desktop\celular\backup ricardo\desktop\utfpr\i_c_2018-2019\pso_02\include\pso.h
+	"alloca.h"
+
+1535293418 source:c:\users\ricardo santos\desktop\celular\backup ricardo\desktop\utfpr\i_c_2018-2019\pso_02\src\pso.cpp
+	"pso.h"
+	<time.h>
+	<stdio.h>
+	<stdlib.h>
+	<imprimir.h>
+
+1535294480 source:c:\gitarquitetura\ic_2018_2019\pso_02\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<rede.h>
+	<pso.h>
+	<imprimir.h>
+	<math.h>
+
+1535242841 c:\gitarquitetura\ic_2018_2019\pso_02\include\rede.h
+	"alloca.h"
+
+1535301670 c:\gitarquitetura\ic_2018_2019\pso_02\include\alloca.h
+
+1535293380 c:\gitarquitetura\ic_2018_2019\pso_02\include\pso.h
+	"alloca.h"
+
+1535209287 c:\gitarquitetura\ic_2018_2019\pso_02\include\imprimir.h
+
+1535301640 source:c:\gitarquitetura\ic_2018_2019\pso_02\src\alloca.cpp
+	"alloca.h"
+	<stdio.h>
+	<stdlib.h>
+
+1535294330 source:c:\gitarquitetura\ic_2018_2019\pso_02\src\imprimir.cpp
+	"imprimir.h"
+	<iostream>
+	<math.h>
+
+1535293418 source:c:\gitarquitetura\ic_2018_2019\pso_02\src\pso.cpp
+	"pso.h"
+	<time.h>
+	<stdio.h>
+	<stdlib.h>
+	<imprimir.h>
+
+1535251449 source:c:\gitarquitetura\ic_2018_2019\pso_02\src\rede.cpp
+	"rede.h"
+	<math.h>
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+
