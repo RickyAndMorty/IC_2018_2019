@@ -136,7 +136,7 @@ int main()
 
     enxame.setJp(particulas);
     enxame.setJPibest(particulas);
-    cout << "Particulas" << " " << enxame.getParticulas() << endl;
+    //cout << "Particulas" << " " << enxame.getParticulas() << endl;
 
 
     enxame.calculaPosicao();
@@ -164,7 +164,5 @@ int main()
     cout << "Posicao" << " " << endl;
     print.imprimir1DD(snr,ocdma.getUsuarios());
 
-    /*cout << "Posicao" << " " << endl;
-    print.imprimir2DD(enxame.getPosicao(),enxame.getIncognitas(),enxame.getParticulas());*/
     return 0;
 }
