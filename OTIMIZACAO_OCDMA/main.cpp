@@ -52,19 +52,51 @@ void distancia(double* Ltx_i)
     Ltx_i[29] = 26.3720;
     Ltx_i[30] = 26.7481;
     Ltx_i[31] = 19.7142;
+    Ltx_i[32] = 27.3182;
+    Ltx_i[33] = 5.2198;
+    Ltx_i[34] = 6.6824;
+    Ltx_i[35] = 7.5307;
+    Ltx_i[36] = 20.2101;
+    Ltx_i[37] = 8.0123;
+    Ltx_i[38] = 9.8661;
+    Ltx_i[39] = 12.3720;
+    Ltx_i[40] = 11.7481;
+    Ltx_i[41] = 13.7142;
+    Ltx_i[42] = 7.3182;
+    Ltx_i[43] = 13.2198;
+    Ltx_i[44] = 12.6824;
+    Ltx_i[45] = 38.5307;
+    Ltx_i[46] = 48.2101;
+    Ltx_i[47] = 36.0123;
+    Ltx_i[48] = 4.8661;
+    Ltx_i[49] = 6.3720;
+    Ltx_i[50] = 27.7481;
+    Ltx_i[51] = 15.7142;
+    Ltx_i[52] = 24.3182;
+    Ltx_i[53] = 41.2198;
+    Ltx_i[54] = 14.6824;
+    Ltx_i[55] = 8.5307;
+    Ltx_i[56] = 10.2101;
+    Ltx_i[57] = 20.0123;
+    Ltx_i[58] = 30.8661;
+    Ltx_i[59] = 6.3720;
+    Ltx_i[60] = 46.7481;
+    Ltx_i[61] = 29.7142;
+    Ltx_i[62] = 36.7481;
+    Ltx_i[63] = 39.7142;
 }
 int main()
 {
-    double Ltx[32];
-    double snr[32];
+    double Ltx[64];
+    double snr[64];
     distancia(Ltx);
-
-    int particulas = 64;
+    int particulas = 128;
 
     rede ocdma;
     pso enxame;
     imprimir print;
-    ocdma.setUsuarios(32);
+    ocdma.setUsuarios(64);
+
     cout << "Usuarios: " << " " << ocdma.getUsuarios() << endl;
     ocdma.setGamp(100.00);
     cout << "Gamp: " << " " << ocdma.getGamp() << endl;

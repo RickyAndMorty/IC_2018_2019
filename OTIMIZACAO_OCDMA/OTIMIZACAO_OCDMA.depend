@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1535305150 source:c:\gitarquitetura\ic_2018_2019\otimizacao_ocdma\src\alloca.cpp
+	"alloca.h"
+	<stdio.h>
+	<stdlib.h>
+
+1535302362 c:\gitarquitetura\ic_2018_2019\otimizacao_ocdma\include\alloca.h
+
+1535305225 source:c:\gitarquitetura\ic_2018_2019\otimizacao_ocdma\src\imprimir.cpp
+	"imprimir.h"
+	<iostream>
+	<math.h>
+
+1535305223 c:\gitarquitetura\ic_2018_2019\otimizacao_ocdma\include\imprimir.h
+
+1535305309 source:c:\gitarquitetura\ic_2018_2019\otimizacao_ocdma\src\pso.cpp
+	"pso.h"
+	<time.h>
+	<stdio.h>
+	<stdlib.h>
+	<imprimir.h>
+
+1535305271 c:\gitarquitetura\ic_2018_2019\otimizacao_ocdma\include\pso.h
+	"alloca.h"
+
+1535302302 source:c:\gitarquitetura\ic_2018_2019\otimizacao_ocdma\src\rede.cpp
+	"rede.h"
+	<math.h>
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+
+1535302328 c:\gitarquitetura\ic_2018_2019\otimizacao_ocdma\include\rede.h
+	"alloca.h"
+
