@@ -371,6 +371,7 @@ double** pso::randomica(double** matriz)
 void pso::speed()
 {
     int i,j;
+    double aux = 0.00;
     double** rand1 = NULL;
     double** rand2 = NULL;
     rand1 = memoria.allocaMatrizD(incognitas,particulas);
@@ -382,7 +383,10 @@ void pso::speed()
     {
         for(j = 0; j < particulas; j ++)
         {
+            aux = (((double)(rand()))/RAND_MAX)/2.00;
+            w = 0.5 + aux;
             velocidade[i][j] = w * velocidade[i][j] + c1 * rand1[i][j]*(pibest[i][j] - posicao[i][j]) +  c2 * rand2[i][j]*(pgbest[i] - posicao[i][j]);
+            w = 0.00;
         }
     }
     rand1 = memoria.liberaMatrizD(rand1, incognitas);

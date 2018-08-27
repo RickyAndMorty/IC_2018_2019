@@ -33,3 +33,12 @@
 1535302328 c:\gitarquitetura\ic_2018_2019\otimizacao_ocdma\include\rede.h
 	"alloca.h"
 
+1535323553 source:c:\gitarquitetura\ic_2018_2019\otimizacao_ocdma\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<rede.h>
+	<pso.h>
+	<imprimir.h>
+	<math.h>
+

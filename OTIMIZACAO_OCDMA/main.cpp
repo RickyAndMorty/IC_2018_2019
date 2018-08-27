@@ -144,7 +144,7 @@ int main()
 
     enxame.setC1(1.526200);
     enxame.setC2(1.732994);
-    enxame.setW(0.812214);
+    //enxame.setW(0.812214);
     enxame.setJPgbest(0.00);
     enxame.setIteracoes(1800);
     enxame.setIncognitas(ocdma.getUsuarios());
