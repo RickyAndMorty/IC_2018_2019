@@ -142,31 +142,34 @@ int main()
 
 /*****************************AQUI COMEÇA OS MÉTODOS DO PSO********************************************************/
 
-    enxame.setC1(1.526200);
-    enxame.setC2(1.732994);
+    enxame.setC1(1.526200);//Configura a constante de aceleração local
+    enxame.setC2(1.732994);//Configura a constante de aceleração global
     //enxame.setW(0.812214);
-    enxame.setJPgbest(0.00);
-    enxame.setIteracoes(1800);
-    enxame.setIncognitas(ocdma.getUsuarios());
-    enxame.setParticulas(particulas);
+    enxame.setJPgbest(0.00);//
+    enxame.setIteracoes(1800);// Configura o número de iteraçãoes
+    enxame.setIncognitas(ocdma.getUsuarios());// Configura o número de incónitas do PSO
+    enxame.setParticulas(particulas);// Configura o número de partículas do PSO
 
-    enxame.setSnir(ocdma.getUsuarios(), particulas);
+    enxame.setSnir(ocdma.getUsuarios(), particulas);// Configura o espaço do busca do PSO
 
-    enxame.setPosicao(ocdma.getUsuarios(), particulas);
+    enxame.setPosicao(ocdma.getUsuarios(), particulas);// Configura a posição das partículas
 
     enxame.setG(ocdma.getUsuarios(),ocdma.getUsuarios());
-    enxame.setFth(ocdma.getUsuarios(), particulas);
 
-    enxame.setVelocidade(ocdma.getUsuarios(), particulas);
+    enxame.setFth(ocdma.getUsuarios(), particulas);//
 
-    enxame.setPibest(ocdma.getUsuarios(), particulas);
+    enxame.setVelocidade(ocdma.getUsuarios(), particulas);// Configura a matriz de velocidades do PSO
+
+    enxame.setPibest(ocdma.getUsuarios(), particulas);// Configura a matriz dos melhores locais do PSO
 
     enxame.setGii(ocdma.getUsuarios());
+
     enxame.setF(ocdma.getUsuarios());
 
-    enxame.setPgbest(ocdma.getUsuarios());
+    enxame.setPgbest(ocdma.getUsuarios());// Configura os melhores globais do PSO
 
     enxame.setJp(particulas);
+
     enxame.setJPibest(particulas);
     //cout << "Particulas" << " " << enxame.getParticulas() << endl;
 
