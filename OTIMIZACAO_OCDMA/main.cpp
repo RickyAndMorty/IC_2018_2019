@@ -95,32 +95,32 @@ int main()
     rede ocdma;// Objeto do tipo rede OCDMA
     pso enxame;// Objeto do tipo pso, que representa as características do algoritmo
     imprimir print;
-    ocdma.setUsuarios(64);
+    ocdma.setUsuarios(64);// Configura a rede com 64 usuários
 
     cout << "Usuarios: " << " " << ocdma.getUsuarios() << endl;
-    ocdma.setGamp(100.00);
+    ocdma.setGamp(100.00);// Configura os ganhos do amplificador
     cout << "Gamp: " << " " << ocdma.getGamp() << endl;
-    ocdma.setA_star(0.0016);
+    ocdma.setA_star(0.0016);//
     cout << "A_star: " << " " << ocdma.getA_star() << endl;
     ocdma.setAlfa(0.0416);
     cout << "Alfa: " << " " << ocdma.getAlfa() << endl;
-    ocdma.setPmax(0.0100);
+    ocdma.setPmax(0.0100);// Configura a potência mínima de transmissão
     cout << "Pmax: " << " " << ocdma.getPmax() << endl;
-    ocdma.setPmin(pow(10.00,-10.00));
+    ocdma.setPmin(pow(10.00,-10.00));//Configura a potência máxima de transmissão
     cout << "Pmin: " << " " << ocdma.getPmin() << endl;
-    ocdma.setVmax(0.0020);
+    ocdma.setVmax(0.0020);// Configura a velociade máxima das partículas do PSO
     cout << "Vmax: " << " " << ocdma.getVmax() << endl;
-    ocdma.setVmin(-0.0020);
+    ocdma.setVmin(-0.0020);// Configura a velocidade míníma das partículas do PSO
     cout << "Vmin: " << " " << ocdma.getVmin() << endl;
-    ocdma.setSnirTarget(1.5259*pow(10.00,-5.00));
+    ocdma.setSnirTarget(1.5259*pow(10.00,-5.00));//Configura a relação sinal-ruído target
     cout << "SnirTarget: " << " " << ocdma.getSnirTarget() << endl;
     // Interferência
-    ocdma.setSigma(2 * (ocdma.getGamp() - 1.00) * 193.0 * pow(10.00,12.00) * 100.00 * pow(10.00,9.00) * 6.63 * pow(10.00,-34.00));
+    ocdma.setSigma(2 * (ocdma.getGamp() - 1.00) * 193.0 * pow(10.00,12.00) * 100.00 * pow(10.00,9.00) * 6.63 * pow(10.00,-34.00));// Configura a interferência
     cout << "Sigma: " << " " << ocdma.getSigma() << endl;
 
-    ocdma.setLtx(ocdma.getUsuarios());
+    ocdma.setLtx(ocdma.getUsuarios());// Aloca o vetor das distâncias do acoplador estrela, em função do número de usuários da rede
 
-    ocdma.setDistancia(Ltx);
+    ocdma.setDistancia(Ltx);// Atribui uma distância para cada posição do vetor de distâncias
 
 
 
