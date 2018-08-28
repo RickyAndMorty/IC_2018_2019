@@ -7,7 +7,7 @@
 #include <math.h>
 
 using namespace std;
-
+// Função que converte potência em dB
 void  calculaSNR(double* snr, double** snir, int k, int m)
 {
     int i;
@@ -17,7 +17,7 @@ void  calculaSNR(double* snr, double** snir, int k, int m)
     }
 
 }
-
+// Função que insere as distâncias do acoplador em estrela até os clientes (ONUs)
 void distancia(double* Ltx_i)
 {
     Ltx_i[0] = 48.8779;
