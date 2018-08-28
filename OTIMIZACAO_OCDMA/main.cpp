@@ -8,8 +8,6 @@
 
 using namespace std;
 
-/***********************Função que transforma Potência em Db******************************************/
-
 void  calculaSNR(double* snr, double** snir, int k, int m)
 {
     int i;
@@ -19,8 +17,6 @@ void  calculaSNR(double* snr, double** snir, int k, int m)
     }
 
 }
-
-/***************************Distância entre o acoplador estrela e as ONUs******************************/
 
 void distancia(double* Ltx_i)
 {
@@ -94,35 +90,35 @@ int main()
     double Ltx[64];
     double snr[64];
     distancia(Ltx);
-    int particulas = 128; //Partículas do algoritmo PSO
+    int particulas = 128;
 
-    rede ocdma;// Objeto do tipo rede de fibra óptica com acesso múltiplo por divisão de códigos ópticos
-    pso enxame;// Objeto do tipo Particle Swarm Optimization
-    imprimir print;// Objeto para imprimir dos dados
-    ocdma.setUsuarios(64);// Define a quantidade de usuários da rede como 64
+    rede ocdma;
+    pso enxame;
+    imprimir print;
+    ocdma.setUsuarios(64);
 
-    cout << "Usuarios: " << " " << ocdma.getUsuarios() << endl;// Mostra a quantidade de usuários
+    cout << "Usuarios: " << " " << ocdma.getUsuarios() << endl;
     ocdma.setGamp(100.00);
-    cout << "Gamp: " << " " << ocdma.getGamp() << endl;// Ganho do amplificador
+    cout << "Gamp: " << " " << ocdma.getGamp() << endl;
     ocdma.setA_star(0.0016);
-    cout << "A_star: " << " " << ocdma.getA_star() << endl;//Perda do acoplador estrela
+    cout << "A_star: " << " " << ocdma.getA_star() << endl;
     ocdma.setAlfa(0.0416);
     cout << "Alfa: " << " " << ocdma.getAlfa() << endl;
     ocdma.setPmax(0.0100);
-    cout << "Pmax: " << " " << ocdma.getPmax() << endl;// Potência máxima transmitida
+    cout << "Pmax: " << " " << ocdma.getPmax() << endl;
     ocdma.setPmin(pow(10.00,-10.00));
-    cout << "Pmin: " << " " << ocdma.getPmin() << endl;//Potência mínima transmitida
+    cout << "Pmin: " << " " << ocdma.getPmin() << endl;
     ocdma.setVmax(0.0020);
-    cout << "Vmax: " << " " << ocdma.getVmax() << endl;//Velocidade máxima das partículas
+    cout << "Vmax: " << " " << ocdma.getVmax() << endl;
     ocdma.setVmin(-0.0020);
-    cout << "Vmin: " << " " << ocdma.getVmin() << endl;//Velocidade mínima das partículas
+    cout << "Vmin: " << " " << ocdma.getVmin() << endl;
     ocdma.setSnirTarget(1.5259*pow(10.00,-5.00));
-    cout << "SnirTarget: " << " " << ocdma.getSnirTarget() << endl;// Relação sinal ruído que se deseja alcançar com a iteração da rede com o PSO
+    cout << "SnirTarget: " << " " << ocdma.getSnirTarget() << endl;
+    // Interferência
+    ocdma.setSigma(2 * (ocdma.getGamp() - 1.00) * 193.0 * pow(10.00,12.00) * 100.00 * pow(10.00,9.00) * 6.63 * pow(10.00,-34.00));
+    cout << "Sigma: " << " " << ocdma.getSigma() << endl;
 
-    ocdma.setSigma(2 * (ocdma.getGamp() - 1.00) * 193.0 * pow(10.00,12.00) * 100.00 * pow(10.00,9.00) * 6.63 * pow(10.00,-34.00));// Interferência
-    cout << "Sigma: " << " " << ocdma.getSigma() << endl;// Interferência
-
-    ocdma.setLtx(ocdma.getUsuarios());// Aloca o vetor de distância, uma posição para cada usuário
+    ocdma.setLtx(ocdma.getUsuarios());
 
     ocdma.setDistancia(Ltx);
 
