@@ -87,13 +87,13 @@ void distancia(double* Ltx_i)
 }
 int main()
 {
-    double Ltx[64];
+    double Ltx[64];// Vetor de distâcias entre acoplador estrela e ONUs
     double snr[64];
     distancia(Ltx);
-    int particulas = 128;
+    int particulas = 128;// Quantidade de partículas do PSO
 
-    rede ocdma;
-    pso enxame;
+    rede ocdma;// Objeto do tipo rede OCDMA
+    pso enxame;// Objeto do tipo pso, que representa as características do algoritmo
     imprimir print;
     ocdma.setUsuarios(64);
 
