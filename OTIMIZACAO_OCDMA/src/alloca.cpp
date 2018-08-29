@@ -1,6 +1,8 @@
 #include "alloca.h"
 #include <stdio.h>
 #include <stdlib.h>
+
+// Esta classe é responsável por alocar vetores e matrizes dinamicamente.
 alloca::alloca()
 {
     //ctor
@@ -10,6 +12,7 @@ alloca::~alloca()
 {
     //dtor
 }
+//Metodo que aloca uma matriz do tipo double e retorna o endereço do ponteiro que aponta para a posição alocada.
 double** alloca::allocaMatrizD(int linhas,int colunas)
 {
     int i;
@@ -20,6 +23,7 @@ double** alloca::allocaMatrizD(int linhas,int colunas)
     }
     return matriz;
 }
+//Metodo que aloca um vetor do tipo double e retorna o endereço do ponteiro que aponta para a posição alocada.
 double* alloca::allocaVetorD(int colunas)
 {
     double* vetor = ((double*)calloc(colunas,sizeof(double)));
