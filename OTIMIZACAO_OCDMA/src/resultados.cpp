@@ -62,7 +62,7 @@ void resultados::gravarSnir(double** matriz, int linhas, int colunas)
 {
     FILE *pArq;
     int i,j;
-    if((pArq = fopen("C:/git/IC_2018_2019/resultados/teste.txt", "w")) == 0x0)
+    if((pArq = fopen("C:/git/IC_2018_2019/resultados/snir.bin", "wb")) == 0x0)
     {
         printf("erro.");
         exit(1);
@@ -89,6 +89,31 @@ void resultados::salvarPgbest(double* _pgbest, int z)
     for(i = 0; i < users; i ++)
     {
         pgbest[z][i] = _pgbest[i];
+    }
+}
+void resultados::gravarPgbest(double** pgbest, int iterations)
+{
+    FILE *pArq;
+    int i,j;
+    if((pArq = fopen("C:/git/IC_2018_2019/resultados/Pgbest.bin", "wb")) == 0x0)
+    {
+        printf("erro.");
+        exit(1);
+    }
+
+    for(i = 0; i < iterations; i ++)
+    {
+            for(j = 0; j < users ; j ++)
+            {
+                fprintf(pArq, "%e\t",pgbest[i][j]);
+            }
+            fprintf(pArq, "\n");
+    }
+
+    if(fclose(pArq))
+    {
+        printf("erro.");
+        exit(1);
     }
 }
 double** resultados::getSnir()

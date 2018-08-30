@@ -18,10 +18,12 @@ class resultados
 
     double** getSnir();
     double** getPgbest();
-
-    void gravarSnir(double** matriz, int linhas, int colunas);
     void salvarSNIR(double* pgbest, double** G, double* g_t, double sigma,int iteration, int users);
     void salvarPgbest(double* _pgbest, int z);
+
+    void gravarSnir(double** matriz, int linhas, int colunas);
+
+    void gravarPgbest(double** pgbest, int iterations);
 
     resultados();
     virtual ~resultados();

@@ -205,6 +205,7 @@ int main()
         cout << "i = " << " " << i << endl;
     }
     resultado.gravarSnir(resultado.getSnir(),enxame.getIteracoes(),ocdma.getUsuarios());
+    resultado.gravarPgbest(resultado.getPgbest(),enxame.getIteracoes());
     calculaSNR(snr,enxame.getSnir(),ocdma.getUsuarios(),enxame.getParticulas());
     cout << "Posicao" << " " << endl;
     print.imprimir1DD(snr,ocdma.getUsuarios());
