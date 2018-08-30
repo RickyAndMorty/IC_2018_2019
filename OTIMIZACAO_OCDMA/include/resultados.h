@@ -19,7 +19,7 @@ class resultados
     double** getSnir();
     double** getPgbest();
 
-    void gravarMatriz(double** matriz, int linhas, int colunas);
+    void gravarSnir(double** matriz, int linhas, int colunas);
     void salvarSNIR(double* pgbest, double** G, double* g_t, double sigma,int iteration, int users);
     void salvarPgbest(double* _pgbest, int z);
 

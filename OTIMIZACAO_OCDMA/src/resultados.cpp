@@ -58,7 +58,7 @@ void resultados::setSnir(int iterations, int users)
     snir = memoria.allocaMatrizD(iterations,users);
 }
 
-void resultados::gravarMatriz(double** matriz, int linhas, int colunas)
+void resultados::gravarSnir(double** matriz, int linhas, int colunas)
 {
     FILE *pArq;
     int i,j;

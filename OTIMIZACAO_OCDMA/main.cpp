@@ -204,7 +204,7 @@ int main()
         resultado.salvarPgbest(enxame.getPgbest(),i);
         cout << "i = " << " " << i << endl;
     }
-    resultado.gravarMatriz(resultado.getSnir(),enxame.getIteracoes(),ocdma.getUsuarios());
+    resultado.gravarSnir(resultado.getSnir(),enxame.getIteracoes(),ocdma.getUsuarios());
     calculaSNR(snr,enxame.getSnir(),ocdma.getUsuarios(),enxame.getParticulas());
     cout << "Posicao" << " " << endl;
     print.imprimir1DD(snr,ocdma.getUsuarios());
