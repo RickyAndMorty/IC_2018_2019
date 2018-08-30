@@ -4,6 +4,7 @@
 #include <rede.h>
 #include <pso.h>
 #include <imprimir.h>
+#include <resultados.h>
 #include <math.h>
 
 using namespace std;
@@ -95,6 +96,7 @@ int main()
     rede ocdma;// Objeto do tipo rede OCDMA
     pso enxame;// Objeto do tipo pso, que representa as características do algoritmo
     imprimir print;
+    resultados resultado;
     ocdma.setUsuarios(64);// Configura a rede com 64 usuários
 
     cout << "Usuarios: " << " " << ocdma.getUsuarios() << endl;
@@ -146,7 +148,7 @@ int main()
     enxame.setC2(1.732994);//Configura a constante de aceleração global
     //enxame.setW(0.812214);
     enxame.setJPgbest(0.00);//
-    enxame.setIteracoes(1800);// Configura o número de iteraçãoes
+    enxame.setIteracoes(2000);// Configura o número de iteraçãoes
     enxame.setIncognitas(ocdma.getUsuarios());// Configura o número de incónitas do PSO
     enxame.setParticulas(particulas);// Configura o número de partículas do PSO
 
@@ -173,6 +175,7 @@ int main()
     enxame.setJPibest(particulas);
     //cout << "Particulas" << " " << enxame.getParticulas() << endl;
 
+    resultado.setSnir(enxame.getParticulas(),ocdma.getUsuarios());// Objeto que guardará as iterações do algoritmo
 
     enxame.calculaPosicao();
     enxame.calculaPibest();
@@ -193,8 +196,10 @@ int main()
         enxame.speedBounds(ocdma.getVmin(), ocdma.getVmax());
         enxame.populationUpdate();
         enxame.powerBounds(ocdma.getPmin(),ocdma.getPmax());
+        resultado.salvarSNIR(enxame.getPgbest(),enxame.getG(),ocdma.getG_t(),ocdma.getSigma(),i,ocdma.getUsuarios());
         cout << "i = " << " " << i << endl;
     }
+    resultado.gravarMatriz(resultado.getSnir(),enxame.getIteracoes(),ocdma.getUsuarios());
     calculaSNR(snr,enxame.getSnir(),ocdma.getUsuarios(),enxame.getParticulas());
     cout << "Posicao" << " " << endl;
     print.imprimir1DD(snr,ocdma.getUsuarios());
