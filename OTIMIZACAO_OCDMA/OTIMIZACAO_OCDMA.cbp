@@ -38,11 +38,13 @@
 		<Unit filename="include/imprimir.h" />
 		<Unit filename="include/pso.h" />
 		<Unit filename="include/rede.h" />
+		<Unit filename="include/resultados.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/alloca.cpp" />
 		<Unit filename="src/imprimir.cpp" />
 		<Unit filename="src/pso.cpp" />
 		<Unit filename="src/rede.cpp" />
+		<Unit filename="src/resultados.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

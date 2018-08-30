@@ -61,70 +61,70 @@ end
 rmin=2;
 rmax=50;
 %Ltx_i=unifrnd(rmin, rmax, 1,K);%comprimento das fibras tx
-Ltx_i= [48.8779
-    26.9518
-    40.0057
-    46.3947
-    18.7903
-    22.8634
-    37.3182
-    5.2198
-    32.6824
-    48.5307
-    10.2101
-    40.0123
-    14.8661
-    26.3720
-    46.7481
-    29.7142
-    28.8779
-    36.9518
-    30.0057
-    16.3947
-    8.7903
-    32.8634
-    27.3182
-    4.2198
-    12.6824
-    28.5307
-    40.2101
-    30.0123
-    34.8661
-    26.3720
-    26.7481
-    19.7142
-    27.3182
-    5.2198
-    6.6824
-    7.5307
-    20.2101
-    8.0123
-    9.8661
-    12.3720
-    11.7481
-    13.7142
-    7.3182
-    13.2198
-    12.6824
-    38.5307
-    48.2101
-    36.0123
-    4.8661
-    6.3720
-    27.7481
-    15.7142
-    24.3182
-    41.2198
-    14.6824
-    8.5307
-    10.2101
-    20.0123
-    30.8661
-    6.3720
-    46.7481
-    29.7142
+Ltx_i= [    Ltx_i[0] = 48.8779;
+    Ltx_i[1] = 26.9518;
+    Ltx_i[2] = 40.0057;
+    Ltx_i[3] = 46.3947;
+    Ltx_i[4] = 18.7903;
+    Ltx_i[5] = 22.8634;
+    Ltx_i[6] = 37.3182;
+    Ltx_i[7] = 5.2198;
+    Ltx_i[8] = 32.6824;
+    Ltx_i[9] = 48.5307;
+    Ltx_i[10] = 10.2101;
+    Ltx_i[11] = 40.0123;
+    Ltx_i[12] = 14.8661;
+    Ltx_i[13] = 26.3720;
+    Ltx_i[14] = 46.7481;
+    Ltx_i[15] = 29.7142;
+    Ltx_i[16] = 28.8779;
+    Ltx_i[17] = 36.9518;
+    Ltx_i[18] = 30.0057;
+    Ltx_i[19] = 16.3947;
+    Ltx_i[20] = 8.7903;
+    Ltx_i[21] = 32.8634;
+    Ltx_i[22] = 27.3182;
+    Ltx_i[23] = 4.2198;
+    Ltx_i[24] = 12.6824;
+    Ltx_i[25] = 28.5307;
+    Ltx_i[26] = 40.2101;
+    Ltx_i[27] = 30.0123;
+    Ltx_i[28] = 34.8661;
+    Ltx_i[29] = 26.3720;
+    Ltx_i[30] = 26.7481;
+    Ltx_i[31] = 19.7142;
+    Ltx_i[32] = 27.3182;
+    Ltx_i[33] = 5.2198;
+    Ltx_i[34] = 6.6824;
+    Ltx_i[35] = 7.5307;
+    Ltx_i[36] = 20.2101;
+    Ltx_i[37] = 8.0123;
+    Ltx_i[38] = 9.8661;
+    Ltx_i[39] = 12.3720;
+    Ltx_i[40] = 11.7481;
+    Ltx_i[41] = 13.7142;
+    Ltx_i[42] = 7.3182;
+    Ltx_i[43] = 13.2198;
+    Ltx_i[44] = 12.6824;
+    Ltx_i[45] = 38.5307;
+    Ltx_i[46] = 48.2101;
+    Ltx_i[47] = 36.0123;
+    4.8661;
+    6.3720;
+    27.7481;
+    15.7142;
+    24.3182;
+    41.2198;
+    14.6824;
+    8.5307;
+    10.2101;
+    20.0123;
+    30.8661;
+    6.3720;
+    46.7481;
+    29.7142;
     36.7481;
-     39.7142]';
+     39.7142;]';
 
 %Lrx_i=unifrnd(rmin, rmax, 1, K);%comprimento das fibras rx
 Lrx_i=[32.0586
@@ -204,20 +204,20 @@ end
 % fclose(arquivo);
 % clear arquivo
 
-arquivo = fopen('C:/git/IC_2018_2019/resultados/SNR.bin');
+arquivo = fopen('C:/Users/Ricardo Santos/Desktop/celular/Backup Ricardo/Desktop/UTFPR/I_C_2017-2018/PSOs/PSO_01_DoubleFth/resultados/SNR.bin');
 % A = fscanf(arquivo,'%f',[colunas linhas]);
 SNR = fscanf(arquivo,'%f');
 fclose(arquivo);
 clear arquivo
 
-arquivo = fopen('C:/git/IC_2018_2019/resultados/jPgbest.bin');
+arquivo = fopen('C:/Users/Ricardo Santos/Desktop/celular/Backup Ricardo/Desktop/UTFPR/I_C_2017-2018/PSOs/PSO_01_DoubleFth/resultados/jPgbest.bin');
 % A = fscanf(arquivo,'%f',[colunas linhas]);
 jPgbest = fscanf(arquivo,'%f');
 fclose(arquivo);
 clear arquivo ans
 
 
-arquivo = fopen('C:/git/IC_2018_2019/resultados/SNIR.bin');
+arquivo = fopen('C:/Users/Ricardo Santos/Desktop/celular/Backup Ricardo/Desktop/UTFPR/I_C_2017-2018/PSOs/PSO_01_DoubleFth/resultados/SNIR.bin');
 % A = fscanf(arquivo,'%f',[colunas linhas]);
 sniraux = fscanf(arquivo,'%f',[K iteracoes]);
 fclose(arquivo);
@@ -225,7 +225,7 @@ clear arquivo ans
 
 
 
-arquivo = fopen('C:/git/IC_2018_2019/resultados/Pgbest.bin');
+arquivo = fopen('C:/Users/Ricardo Santos/Desktop/celular/Backup Ricardo/Desktop/UTFPR/I_C_2017-2018/PSOs/PSO_01_DoubleFth/resultados/Pgbest.bin');
 % A = fscanf(arquivo,'%f',[colunas linhas]);
 bestaux = fscanf(arquivo,'%f',[K iteracoes]);
 fclose(arquivo);

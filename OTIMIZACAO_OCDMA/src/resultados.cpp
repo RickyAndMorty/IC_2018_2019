@@ -9,7 +9,19 @@ resultados::~resultados()
 {
     //dtor
 }
+void resultados::setUsers(int _users)
+{
+    users = _users;
+}
 
+void resultados::setPgbest(int linhas, int colunas)
+{
+    pgbest = memoria.allocaMatrizD(linhas,colunas);
+}
+double** resultados::getPgbest()
+{
+    return pgbest;
+}
 void resultados::salvarSNIR(double* pgbest, double** G, double* g_t, double sigma,int iteration, int users)
 {
     int i,j;
@@ -50,7 +62,7 @@ void resultados::gravarMatriz(double** matriz, int linhas, int colunas)
 {
     FILE *pArq;
     int i,j;
-    if((pArq = fopen("Matriz", "w")) == 0x0)
+    if((pArq = fopen("C:/git/IC_2018_2019/resultados/teste.txt", "w")) == 0x0)
     {
         printf("erro.");
         exit(1);
@@ -71,7 +83,14 @@ void resultados::gravarMatriz(double** matriz, int linhas, int colunas)
         exit(1);
     }
 }
-
+void resultados::salvarPgbest(double* _pgbest, int z)
+{
+    int i;
+    for(i = 0; i < users; i ++)
+    {
+        pgbest[z][i] = _pgbest[i];
+    }
+}
 double** resultados::getSnir()
 {
     return snir;

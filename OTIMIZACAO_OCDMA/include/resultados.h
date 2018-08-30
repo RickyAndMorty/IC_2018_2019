@@ -8,13 +8,20 @@
 class resultados
 {
     private:
-        double** snir;
+        int users;
+        double** snir, ** pgbest;
         alloca memoria;
     public:
-    void salvarSNIR(double* pgbest, double** G, double* g_t, double sigma,int iteration, int users);
+    void setUsers(int _users);
     void setSnir(int iterations, int users);
-    void gravarMatriz(double** matriz, int linhas, int colunas);
+    void setPgbest(int linhas, int colunas);
+
     double** getSnir();
+    double** getPgbest();
+
+    void gravarMatriz(double** matriz, int linhas, int colunas);
+    void salvarSNIR(double* pgbest, double** G, double* g_t, double sigma,int iteration, int users);
+    void salvarPgbest(double* _pgbest, int z);
 
     resultados();
     virtual ~resultados();

@@ -176,6 +176,10 @@ int main()
     //cout << "Particulas" << " " << enxame.getParticulas() << endl;
 
     resultado.setSnir(enxame.getIteracoes(),ocdma.getUsuarios());// Objeto que guardará as iterações do algoritmo
+    resultado.setUsers(ocdma.getUsuarios());
+    resultado.setPgbest(enxame.getIteracoes(),ocdma.getUsuarios());
+
+
 
     enxame.calculaPosicao();
     enxame.calculaPibest();
@@ -197,6 +201,7 @@ int main()
         enxame.populationUpdate();
         enxame.powerBounds(ocdma.getPmin(),ocdma.getPmax());
         resultado.salvarSNIR(enxame.getPgbest(),enxame.getG(),ocdma.getG_t(),ocdma.getSigma(),i,ocdma.getUsuarios());
+        resultado.salvarPgbest(enxame.getPgbest(),i);
         cout << "i = " << " " << i << endl;
     }
     resultado.gravarMatriz(resultado.getSnir(),enxame.getIteracoes(),ocdma.getUsuarios());
