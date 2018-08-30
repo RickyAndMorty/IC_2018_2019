@@ -86,8 +86,11 @@
 	<resultados.h>
 	<math.h>
 
-1535592832 c:\git\ic_2018_2019\otimizacao_ocdma\include\resultados.h
+1535594784 c:\git\ic_2018_2019\otimizacao_ocdma\include\resultados.h
 	<alloca.h>
 	<stdio.h>
 	<stdlib.h>
+
+1535594779 source:c:\git\ic_2018_2019\otimizacao_ocdma\src\resultados.cpp
+	"resultados.h"
 

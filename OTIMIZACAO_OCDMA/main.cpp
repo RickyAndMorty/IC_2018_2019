@@ -175,7 +175,7 @@ int main()
     enxame.setJPibest(particulas);
     //cout << "Particulas" << " " << enxame.getParticulas() << endl;
 
-    resultado.setSnir(enxame.getParticulas(),ocdma.getUsuarios());// Objeto que guardará as iterações do algoritmo
+    resultado.setSnir(enxame.getIteracoes(),ocdma.getUsuarios());// Objeto que guardará as iterações do algoritmo
 
     enxame.calculaPosicao();
     enxame.calculaPibest();
