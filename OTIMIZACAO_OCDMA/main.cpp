@@ -89,7 +89,7 @@ void distancia(double* Ltx_i)
 int main()
 {
     double Ltx[64];// Vetor de distâcias entre acoplador estrela e ONUs
-    double snr[64];
+    double _snir[64];
     distancia(Ltx);
     int particulas = 128;// Quantidade de partículas do PSO
 
@@ -179,6 +179,8 @@ int main()
     resultado.setUsers(ocdma.getUsuarios());
     resultado.setPgbest(enxame.getIteracoes(),ocdma.getUsuarios());
 
+    resultado.setPower(enxame.getIteracoes());
+
 
 
     enxame.calculaPosicao();
@@ -202,13 +204,19 @@ int main()
         enxame.powerBounds(ocdma.getPmin(),ocdma.getPmax());
         resultado.salvarSNIR(enxame.getPgbest(),enxame.getG(),ocdma.getG_t(),ocdma.getSigma(),i,ocdma.getUsuarios());
         resultado.salvarPgbest(enxame.getPgbest(),i);
+
+        resultado.salvarPower(enxame.getPgbest(),i,ocdma.getUsuarios());
         cout << "i = " << " " << i << endl;
     }
     resultado.gravarSnir(resultado.getSnir(),enxame.getIteracoes(),ocdma.getUsuarios());
     resultado.gravarPgbest(resultado.getPgbest(),enxame.getIteracoes());
-    calculaSNR(snr,enxame.getSnir(),ocdma.getUsuarios(),enxame.getParticulas());
+    calculaSNR(_snir,enxame.getSnir(),ocdma.getUsuarios(),enxame.getParticulas());
     cout << "Posicao" << " " << endl;
-    print.imprimir1DD(snr,ocdma.getUsuarios());
+    print.imprimir1DD(_snir,ocdma.getUsuarios());
+
+    resultado.gravarSnirdB(_snir,ocdma.getUsuarios());
+
+    resultado.gravarPower(resultado.getPower(),enxame.getIteracoes());
 
     return 0;
 }

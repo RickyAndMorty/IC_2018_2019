@@ -13,7 +13,10 @@ void resultados::setUsers(int _users)
 {
     users = _users;
 }
-
+void resultados::setPower(int iterations)
+{
+    power = memoria.allocaVetorD(iterations);
+}
 void resultados::setPgbest(int linhas, int colunas)
 {
     pgbest = memoria.allocaMatrizD(linhas,colunas);
@@ -21,6 +24,22 @@ void resultados::setPgbest(int linhas, int colunas)
 double** resultados::getPgbest()
 {
     return pgbest;
+}
+double* resultados::getPower()
+{
+    return power;
+}
+
+void resultados::salvarPower(double* pgbest,int iteration, int users)
+{
+    int j;
+    double soma = 0;
+    for(j = 0; j < users; j ++)
+    {
+        soma += pgbest[j];
+    }
+    power[iteration] = soma;
+    soma = 0;
 }
 void resultados::salvarSNIR(double* pgbest, double** G, double* g_t, double sigma,int iteration, int users)
 {
@@ -119,4 +138,43 @@ void resultados::gravarPgbest(double** pgbest, int iterations)
 double** resultados::getSnir()
 {
     return snir;
+}
+
+void resultados::gravarSnirdB(double* _snir, int users)
+{
+    FILE *pArq;
+    int i;
+    if((pArq = fopen("C:/git/IC_2018_2019/resultados/SNIRdB.bin", "wb")) == 0x0)
+    {
+        printf("erro.");
+        exit(1);
+    }
+    for(i = 0; i < users ; i ++)
+    {
+        fprintf(pArq, "%e \n",_snir[i]);
+    }
+    if(fclose(pArq))
+    {
+        printf("erro.");
+        exit(1);
+    }
+}
+void resultados::gravarPower(double* _power, int users)
+{
+    FILE *pArq;
+    int i;
+    if((pArq = fopen("C:/git/IC_2018_2019/resultados/power.bin", "wb")) == 0x0)
+    {
+        printf("erro.");
+        exit(1);
+    }
+    for(i = 0; i < users ; i ++)
+    {
+        fprintf(pArq, "%e \n",_power[i]);
+    }
+    if(fclose(pArq))
+    {
+        printf("erro.");
+        exit(1);
+    }
 }

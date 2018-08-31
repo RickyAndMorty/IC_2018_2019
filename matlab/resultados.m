@@ -204,17 +204,17 @@ end
 % fclose(arquivo);
 % clear arquivo
 
-arquivo = fopen('C:/git/IC_2018_2019/resultados/SNR.bin');
+arquivo = fopen('C:/git/IC_2018_2019/resultados/SNIRdB.bin');
 % A = fscanf(arquivo,'%f',[colunas linhas]);
-SNR = fscanf(arquivo,'%f');
+SNIRdb = fscanf(arquivo,'%f');
 fclose(arquivo);
 clear arquivo
 
-arquivo = fopen('C:/git/IC_2018_2019/resultados/jPgbest.bin');
-% A = fscanf(arquivo,'%f',[colunas linhas]);
-jPgbest = fscanf(arquivo,'%f');
-fclose(arquivo);
-clear arquivo ans
+% arquivo = fopen('C:/git/IC_2018_2019/resultados/jPgbest.bin');
+% % A = fscanf(arquivo,'%f',[colunas linhas]);
+% jPgbest = fscanf(arquivo,'%f');
+% fclose(arquivo);
+% clear arquivo ans
 
 
 arquivo = fopen('C:/git/IC_2018_2019/resultados/SNIR.bin');
