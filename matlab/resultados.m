@@ -264,8 +264,14 @@ plot(repmat(10*log10((sigma_cc2).*SNR_target),1,iteracoes),'k--','LineWidth',2.5
 xlabel('Iterações')
 ylabel('CIR (dB)')
 
-
-
+figure(2)
+arquivo = fopen('C:/git/IC_2018_2019/resultados/power.bin');
+power = fscanf(arquivo,'%f',[1 iteracoes]);
+semilogy(Nst,repmat(sum(Popt),1,iteracoes),'k--')
+hold on
+plot(1:iteracoes,power)
+fclose(arquivo);
+clear arquivo
 
 
 
