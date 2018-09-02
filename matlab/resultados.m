@@ -2,7 +2,7 @@
 close all
 clear all
 K=64;
-particulas = 128;
+particulas = 66;
 ws = 60E-19; 
 c1 = 1.6; 
 c2 = 1.6;

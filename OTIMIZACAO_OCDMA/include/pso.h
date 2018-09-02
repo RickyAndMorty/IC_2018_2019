@@ -61,11 +61,11 @@ class pso
         void fitness(double pmax);
         void insertionSort(double* jP, double * MaxJ, int* idx, int M);
         double** randomica(double** matriz);
-        double constantes();
+
 
         void bestLocal();
         void bestGlobal();
-        void speed(int atual);
+        void speed();
 
         void speedBounds(double vmin, double vmax);
         void populationUpdate();

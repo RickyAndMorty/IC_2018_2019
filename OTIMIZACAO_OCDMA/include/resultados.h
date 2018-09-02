@@ -30,6 +30,7 @@ class resultados
 
     void gravarPgbest(double** pgbest, int iterations);
     void gravarSnirdB(double* _snir, int users);
+    void gravarConstantes(double c1,double c2, double w);
 
     resultados();
     virtual ~resultados();

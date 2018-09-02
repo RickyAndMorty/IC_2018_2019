@@ -178,3 +178,21 @@ void resultados::gravarPower(double* _power, int users)
         exit(1);
     }
 }
+
+void resultados::gravarConstantes(double c1,double c2, double w)
+{
+    FILE *pArq;
+    if((pArq = fopen("C:/git/IC_2018_2019/resultados/constantes.txt", "wb")) == 0x0)
+    {
+        printf("erro.");
+        exit(1);
+    }
+    fprintf(pArq, "%f \n",c1);
+    fprintf(pArq, "%f \n",c2);
+    fprintf(pArq, "%f \n",w);
+    if(fclose(pArq))
+    {
+        printf("erro.");
+        exit(1);
+    }
+}

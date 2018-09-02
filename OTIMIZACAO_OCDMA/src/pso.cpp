@@ -368,7 +368,7 @@ double** pso::randomica(double** matriz)
 }
 
 
-void pso::speed(int atual)
+void pso::speed()
 {
     int i,j;
     double aux = 0.00;
@@ -383,8 +383,8 @@ void pso::speed(int atual)
     {
         for(j = 0; j < particulas; j ++)
         {
-            aux = (((double)(iteracoes - atual))/iteracoes)*(0.812214 - 0.711203) + 0.711203;
-            w = aux;
+            aux = (((double)(rand()))/RAND_MAX)/2.00;
+            w = 0.5 + aux;
             velocidade[i][j] = w * velocidade[i][j] + c1 * rand1[i][j]*(pibest[i][j] - posicao[i][j]) +  c2 * rand2[i][j]*(pgbest[i] - posicao[i][j]);
             w = 0.00;
         }
@@ -438,13 +438,4 @@ void pso::powerBounds(double pmin, double pmax)
             }
         }
     }
-}
-
-double pso::constantes()
-{
-    time_t t;
-    double constante;
-    srand((unsigned) time(&t));
-    constante = 1.00 + ((double)(rand()))/RAND_MAX;
-    return constante;
 }

@@ -91,7 +91,7 @@ int main()
     double Ltx[64];// Vetor de distâcias entre acoplador estrela e ONUs
     double _snir[64];
     distancia(Ltx);
-    int particulas = 128;// Quantidade de partículas do PSO
+    int particulas = 66;// Quantidade de partículas do PSO
 
     rede ocdma;// Objeto do tipo rede OCDMA
     pso enxame;// Objeto do tipo pso, que representa as características do algoritmo
@@ -144,8 +144,8 @@ int main()
 
 /*****************************AQUI COMEÇA OS MÉTODOS DO PSO********************************************************/
 
-    enxame.setC1(enxame.constantes());//Configura a constante de aceleração local
-    enxame.setC2(enxame.constantes());//Configura a constante de aceleração global
+    enxame.setC1(1.526200);//Configura a constante de aceleração local
+    enxame.setC2(1.732994);//Configura a constante de aceleração global
     //enxame.setW(0.812214);
     enxame.setJPgbest(0.00);//
     enxame.setIteracoes(2000);// Configura o número de iteraçãoes
@@ -193,14 +193,12 @@ int main()
 
     for(int i = 0; i < enxame.getIteracoes(); i ++)
     {
-        enxame.setC1(enxame.constantes());//Configura a constante de aceleração local
-        enxame.setC2(enxame.constantes());//Configura a constante de aceleração global
         enxame.calculaSnir(ocdma.getSigma(),ocdma.getG_t());
         enxame.calculaFth(ocdma.getSnirTarget());
         enxame.fitness(ocdma.getPmax());
         enxame.bestLocal();
         enxame.bestGlobal();
-        enxame.speed(i);
+        enxame.speed();
         enxame.speedBounds(ocdma.getVmin(), ocdma.getVmax());
         enxame.populationUpdate();
         enxame.powerBounds(ocdma.getPmin(),ocdma.getPmax());
