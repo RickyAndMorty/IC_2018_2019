@@ -7,7 +7,7 @@ ws = 60E-19;
 c1 = 1.6; 
 c2 = 1.6;
 q = 256;
-iteracoes = 1800;
+iteracoes = 2000;
 Nst = 1 : iteracoes;
 SIR_max_dB=20;
 SIR_max=10^(SIR_max_dB/10);
@@ -232,7 +232,7 @@ fclose(arquivo);
 clear arquivo ans
 
 figure(1)
-subplot(3,1,1);
+%subplot(3,1,1);
 semilogy(Nst,bestaux(1,:)')
 hold on
 semilogy(Nst,bestaux')
@@ -242,11 +242,11 @@ save power_pso Nstt -ASCII
 Nstt=transpose(repmat(Popt,1,iteracoes));
 save power_pso_op Nstt -ASCII
 %xlabel('Iterações')
-ylabel('Potência transmitida (W)')
+ylabel('P(W)')
 %title(['Allocated Power, K = ',num2str(K,3),', Swarm Population, M = ',num2str(particulas,5),' particles  ', '\phi_1 = ',num2str(c1),'  \phi_2 = ',num2str(c2)])
 
-%figure(2)
-subplot(3,1,2); 
+figure(2)
+%subplot(3,1,2); 
 plot(Nst,sum(repmat(Popt,1,iteracoes))./sum(bestaux),'LineWidth',2)
 Nstt=transpose(sum(repmat(Popt,1,iteracoes))./sum(bestaux));
 %legend('Taxa de convergência pelo número de iterações')
@@ -255,16 +255,16 @@ ylabel('Fitness')
 save conver Nstt -ASCII
 
 
-%figure(3)
-subplot(3,1,3); 
+figure(3)
+%subplot(3,1,3); 
 plot(10*log10((q^2/sigma_cc2).*sniraux'))
 hold on
 %plot(10*log10((q^2/sigma_cc2).*sniraux)-7)
 %plot(repmat(10*log10((sigma_cc2).*SNR_target),1,iteracoes),'k--','LineWidth',2.5)
 xlabel('Iterações')
-ylabel('CIR (dB)')
+ylabel('SNIR (dB)')
 
-figure(2)
+figure(4)
 arquivo = fopen('C:/git/IC_2018_2019/resultados/power.bin');
 power = fscanf(arquivo,'%f',[1 iteracoes]);
 semilogy(Nst,repmat(sum(Popt),1,iteracoes),'k--')
