@@ -260,7 +260,7 @@ subplot(3,1,3);
 plot(10*log10((q^2/sigma_cc2).*sniraux'))
 hold on
 %plot(10*log10((q^2/sigma_cc2).*sniraux)-7)
-plot(repmat(10*log10((sigma_cc2).*SNR_target),1,iteracoes),'k--','LineWidth',2.5)
+%plot(repmat(10*log10((sigma_cc2).*SNR_target),1,iteracoes),'k--','LineWidth',2.5)
 xlabel('Iterações')
 ylabel('CIR (dB)')
 
