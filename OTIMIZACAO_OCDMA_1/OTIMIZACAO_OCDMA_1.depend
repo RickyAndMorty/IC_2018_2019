@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1536074481 source:c:\git\ic_2018_2019\otimizacao_ocdma_1\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<rede.h>
+	<ic_pso.h>
+	<imprimir.h>
+	<resultados.h>
+	<math.h>
+
+1536073227 c:\git\ic_2018_2019\otimizacao_ocdma_1\include\rede.h
+	"alloca.h"
+
+1536073132 c:\git\ic_2018_2019\otimizacao_ocdma_1\include\alloca.h
+
+1536073325 c:\git\ic_2018_2019\otimizacao_ocdma_1\include\ic_pso.h
+	"alloca.h"
+
+1536073262 c:\git\ic_2018_2019\otimizacao_ocdma_1\include\imprimir.h
+
+1536073246 c:\git\ic_2018_2019\otimizacao_ocdma_1\include\resultados.h
+	<alloca.h>
+	<stdio.h>
+	<stdlib.h>
+
+1536073159 source:c:\git\ic_2018_2019\otimizacao_ocdma_1\src\alloca.cpp
+	"alloca.h"
+	<stdio.h>
+	<stdlib.h>
+
+1536074494 source:c:\git\ic_2018_2019\otimizacao_ocdma_1\src\ic_pso.cpp
+	"ic_pso.h"
+	<time.h>
+	<stdio.h>
+	<stdlib.h>
+	<imprimir.h>
+
+1536073181 source:c:\git\ic_2018_2019\otimizacao_ocdma_1\src\imprimir.cpp
+	"imprimir.h"
+	<iostream>
+	<math.h>
+
+1536073206 source:c:\git\ic_2018_2019\otimizacao_ocdma_1\src\rede.cpp
+	"rede.h"
+	<math.h>
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+
+1536074071 source:c:\git\ic_2018_2019\otimizacao_ocdma_1\src\resultados.cpp
+	"resultados.h"
+
