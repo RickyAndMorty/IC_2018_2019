@@ -190,7 +190,7 @@ int main()
     enxame.calculaSnir(ocdma.getSigma(),ocdma.getG_t());
     enxame.calculaFth(ocdma.getSnirTarget());
     enxame.fitness(ocdma.getPmax());
-
+    /************Aqui começa as iterações do algoritmo PSO*************************/
     for(int i = 0; i < enxame.getIteracoes(); i ++)
     {
         enxame.calculaSnir(ocdma.getSigma(),ocdma.getG_t());
