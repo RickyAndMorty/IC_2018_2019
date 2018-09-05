@@ -383,7 +383,7 @@ void pso::speed()
     {
         for(j = 0; j < particulas; j ++)
         {
-            aux = (((double)(rand()))/RAND_MAX)/2.00 +0.2;
+            aux = (((double)(rand()))/RAND_MAX)/2.00;
             w = 0.5 + aux;
             velocidade[i][j] = w * velocidade[i][j] + c1 * rand1[i][j]*(pibest[i][j] - posicao[i][j]) +  c2 * rand2[i][j]*(pgbest[i] - posicao[i][j]);
             w = 0.00;

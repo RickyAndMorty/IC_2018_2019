@@ -81,7 +81,7 @@ void resultados::gravarSnir(double** matriz, int linhas, int colunas)
 {
     FILE *pArq;
     int i,j;
-    if((pArq = fopen("C:/git/IC_2018_2019/resultados/snir.bin", "wb")) == 0x0)
+    if((pArq = fopen("C:/git/IC_2018_2019/OTIMIZACAO_OCDMA/resultados/snir.bin", "wb")) == 0x0)
     {
         printf("erro.");
         exit(1);
@@ -114,7 +114,7 @@ void resultados::gravarPgbest(double** pgbest, int iterations)
 {
     FILE *pArq;
     int i,j;
-    if((pArq = fopen("C:/git/IC_2018_2019/resultados/Pgbest.bin", "wb")) == 0x0)
+    if((pArq = fopen("C:/git/IC_2018_2019/OTIMIZACAO_OCDMA/resultados/Pgbest.bin", "wb")) == 0x0)
     {
         printf("erro.");
         exit(1);
@@ -144,7 +144,7 @@ void resultados::gravarSnirdB(double* _snir, int users)
 {
     FILE *pArq;
     int i;
-    if((pArq = fopen("C:/git/IC_2018_2019/resultados/SNIRdB.bin", "wb")) == 0x0)
+    if((pArq = fopen("C:/git/IC_2018_2019/OTIMIZACAO_OCDMA/resultados/SNIRdB.bin", "wb")) == 0x0)
     {
         printf("erro.");
         exit(1);
@@ -163,7 +163,7 @@ void resultados::gravarPower(double* _power, int users)
 {
     FILE *pArq;
     int i;
-    if((pArq = fopen("C:/git/IC_2018_2019/resultados/power.bin", "wb")) == 0x0)
+    if((pArq = fopen("C:/git/IC_2018_2019/OTIMIZACAO_OCDMA/resultados/power.bin", "wb")) == 0x0)
     {
         printf("erro.");
         exit(1);
@@ -182,7 +182,7 @@ void resultados::gravarPower(double* _power, int users)
 void resultados::gravarConstantes(double c1,double c2, double w)
 {
     FILE *pArq;
-    if((pArq = fopen("C:/git/IC_2018_2019/resultados/constantes.txt", "wb")) == 0x0)
+    if((pArq = fopen("C:/git/IC_2018_2019/OTIMIZACAO_OCDMA/resultados/constantes.txt", "wb")) == 0x0)
     {
         printf("erro.");
         exit(1);
