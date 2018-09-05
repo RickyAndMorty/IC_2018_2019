@@ -42,14 +42,16 @@
 	<imprimir.h>
 	<math.h>
 
-1535442538 source:c:\git\ic_2018_2019\otimizacao_ocdma\src\imprimir.cpp
+1536145698 source:c:\git\ic_2018_2019\otimizacao_ocdma\src\imprimir.cpp
 	"imprimir.h"
 	<iostream>
 	<math.h>
+	<stdlib.h>
+	<stdio.h>
 
 1535442538 c:\git\ic_2018_2019\otimizacao_ocdma\include\imprimir.h
 
-1536144713 source:c:\git\ic_2018_2019\otimizacao_ocdma\src\pso.cpp
+1536145012 source:c:\git\ic_2018_2019\otimizacao_ocdma\src\pso.cpp
 	"pso.h"
 	<time.h>
 	<stdio.h>
@@ -76,7 +78,7 @@
 	<stdio.h>
 	<stdlib.h>
 
-1536024587 source:c:\git\ic_2018_2019\otimizacao_ocdma\main.cpp
+1536144997 source:c:\git\ic_2018_2019\otimizacao_ocdma\main.cpp
 	<iostream>
 	<stdio.h>
 	<stdlib.h>

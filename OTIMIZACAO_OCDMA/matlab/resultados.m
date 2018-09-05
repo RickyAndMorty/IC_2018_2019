@@ -7,7 +7,7 @@ ws = 60E-19;
 c1 = 1.6; 
 c2 = 1.6;
 q = 256;
-iteracoes = 2000;
+iteracoes = 1800;
 Nst = 1 : iteracoes;
 SIR_max_dB=20;
 SIR_max=10^(SIR_max_dB/10);
@@ -204,7 +204,7 @@ end
 % fclose(arquivo);
 % clear arquivo
 
-arquivo = fopen('C:/git/IC_2018_2019/resultados/SNIRdB.bin');
+arquivo = fopen('C:/git/IC_2018_2019/OTIMIZACAO_OCDMA/resultados/SNIRdB.bin');
 % A = fscanf(arquivo,'%f',[colunas linhas]);
 SNIRdb = fscanf(arquivo,'%f');
 fclose(arquivo);
@@ -217,7 +217,7 @@ clear arquivo
 % clear arquivo ans
 
 
-arquivo = fopen('C:/git/IC_2018_2019/resultados/SNIR.bin');
+arquivo = fopen('C:/git/IC_2018_2019/OTIMIZACAO_OCDMA/resultados/SNIR.bin');
 % A = fscanf(arquivo,'%f',[colunas linhas]);
 sniraux = fscanf(arquivo,'%f',[K iteracoes]);
 fclose(arquivo);
@@ -225,7 +225,7 @@ clear arquivo ans
 
 
 
-arquivo = fopen('C:/git/IC_2018_2019/resultados/Pgbest.bin');
+arquivo = fopen('C:/git/IC_2018_2019/OTIMIZACAO_OCDMA/resultados/Pgbest.bin');
 % A = fscanf(arquivo,'%f',[colunas linhas]);
 bestaux = fscanf(arquivo,'%f',[K iteracoes]);
 fclose(arquivo);
@@ -265,7 +265,7 @@ xlabel('Iterações')
 ylabel('SNIR (dB)')
 
 figure(4)
-arquivo = fopen('C:/git/IC_2018_2019/resultados/power.bin');
+arquivo = fopen('C:/git/IC_2018_2019/OTIMIZACAO_OCDMA/resultados/power.bin');
 power = fscanf(arquivo,'%f',[1 iteracoes]);
 semilogy(Nst,repmat(sum(Popt),1,iteracoes),'k--')
 hold on

@@ -148,7 +148,7 @@ int main()
     enxame.setC2(1.732994);//Configura a constante de aceleração global
     //enxame.setW(0.812214);
     enxame.setJPgbest(0.00);//
-    enxame.setIteracoes(1800);// Configura o número de iteraçãoes
+    enxame.setIteracoes(2000);// Configura o número de iteraçãoes
     enxame.setIncognitas(ocdma.getUsuarios());// Configura o número de incónitas do PSO
     enxame.setParticulas(particulas);// Configura o número de partículas do PSO
 

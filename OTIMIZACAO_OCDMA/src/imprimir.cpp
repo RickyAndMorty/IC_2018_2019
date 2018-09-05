@@ -1,6 +1,8 @@
 #include "imprimir.h"
 #include <iostream>
 #include <math.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 
 using namespace std;
@@ -20,7 +22,7 @@ void imprimir::imprimir1DD(double* vetor, int colunas)
     for(i = 0; i < colunas; i ++)
     {
         //cout.setf(ios::scientific);
-        cout << " " << vetor[i] << endl;
+        printf("%f \n",vetor[i]);
     }
 }
 void imprimir::imprimir2DD(double** matriz, int linhas, int colunas)
