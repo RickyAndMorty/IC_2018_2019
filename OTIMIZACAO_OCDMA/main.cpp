@@ -6,6 +6,7 @@
 #include <imprimir.h>
 #include <resultados.h>
 #include <math.h>
+#include <time.h>
 
 using namespace std;
 // Função que converte potência em dB
@@ -86,6 +87,23 @@ void distancia(double* Ltx_i)
     Ltx_i[62] = 36.7481;
     Ltx_i[63] = 39.7142;
 }
+
+double constates1()
+{
+    double constante = 0.00;
+    time_t t;
+    srand((unsigned) time(&t)+7);
+    constante = 1.00 + ((double)(rand()))/RAND_MAX;//2.0
+    return constante;
+}
+double constates2()
+{
+    double constante = 0.00;
+    time_t t;
+    srand((unsigned) time(&t));
+    constante = 1.00 + ((double)(rand()))/RAND_MAX;//2.0
+    return constante;
+}
 int main()
 {
     double Ltx[64];// Vetor de distâcias entre acoplador estrela e ONUs
@@ -144,8 +162,8 @@ int main()
 
 /*****************************AQUI COMEÇA OS MÉTODOS DO PSO********************************************************/
 
-    enxame.setC1(1.526200);//Configura a constante de aceleração local
-    enxame.setC2(1.732994);//Configura a constante de aceleração global
+    enxame.setC1(constates1());//Configura a constante de aceleração local
+    enxame.setC2(constates2());//Configura a constante de aceleração global
     //enxame.setW(0.812214);
     enxame.setJPgbest(0.00);//
     enxame.setIteracoes(1800);// Configura o número de iteraçãoes

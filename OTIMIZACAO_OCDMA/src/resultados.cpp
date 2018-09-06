@@ -182,7 +182,7 @@ void resultados::gravarPower(double* _power, int users)
 void resultados::gravarConstantes(double c1,double c2, double w)
 {
     FILE *pArq;
-    if((pArq = fopen("C:/git/IC_2018_2019/OTIMIZACAO_OCDMA/resultados/constantes.txt", "wb")) == 0x0)
+    if((pArq = fopen("C:/git/IC_2018_2019/OTIMIZACAO_OCDMA/resultados/constantes.txt", "w")) == 0x0)
     {
         printf("erro.");
         exit(1);
