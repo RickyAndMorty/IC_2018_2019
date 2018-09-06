@@ -378,7 +378,7 @@ void pso::speed()
     rand2 = memoria.allocaMatrizD(incognitas,particulas);
     rand1 = randomica(rand1);
     rand2 = randomica(rand2);
-    imprimir print;
+    //imprimir print;
     for(i = 0; i < incognitas; i ++)
     {
         for(j = 0; j < particulas; j ++)
