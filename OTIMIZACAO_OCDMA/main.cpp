@@ -87,20 +87,18 @@ void distancia(double* Ltx_i)
     Ltx_i[62] = 36.7481;
     Ltx_i[63] = 39.7142;
 }
-
+//função para gerar uma constante aleatória
 double constates1()
 {
     double constante = 0.00;
-    time_t t;
-    srand((unsigned) time(&t)+7);
+    srand((unsigned) time(0));
     constante = 1.00 + ((double)(rand()))/RAND_MAX;//2.0
     return constante;
 }
 double constates2()
 {
     double constante = 0.00;
-    time_t t;
-    srand((unsigned) time(&t));
+    srand((unsigned) time(0));
     constante = 1.00 + ((double)(rand()))/RAND_MAX;//2.0
     return constante;
 }
@@ -237,5 +235,6 @@ int main()
     resultado.gravarPower(resultado.getPower(),enxame.getIteracoes());
 
     resultado.gravarConstantes(enxame.getC1(),enxame.getC2(),enxame.getW());
+    //cout << " " << RAND_MAX << endl;
     return 0;
 }
