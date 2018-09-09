@@ -13,75 +13,93 @@ pso::~pso()
     //dtor
 }
 /*****************sets do PSO************************/
+/****************************************************/
 void pso::setSnir(int linhas, int colunas)
 {
     snir = memoria.allocaMatrizD(linhas,colunas);
 
 }
+/****************************************************/
 void pso::setPosicao(int linhas, int colunas)
 {
     posicao = memoria.allocaMatrizD(linhas,colunas);
 }
+/****************************************************/
 void pso::setVelocidade(int linhas, int colunas)
 {
     velocidade = memoria.allocaMatrizD(linhas,colunas);
 }
+/****************************************************/
 void pso::setG(int linhas, int colunas)
 {
     G = memoria.allocaMatrizD(linhas,colunas);
 }
+/****************************************************/
 void pso::setPibest(int linhas, int colunas)
 {
     pibest = memoria.allocaMatrizD(linhas,colunas);
 }
+/****************************************************/
 void pso::setFth(int linhas, int colunas)
 {
     fth = memoria.allocaMatrizD(linhas,colunas);
 }
+/****************************************************/
 void pso::setGii(int colunas)
 {
     Gii = memoria.allocaVetorD(colunas);
 }
+/****************************************************/
 void pso::setF(int colunas)
 {
     F = memoria.allocaVetorD(colunas);
 }
+/****************************************************/
 void pso::setJp(int colunas)
 {
     jP = memoria.allocaVetorD(colunas);
 }
+/****************************************************/
 void pso::setPgbest(int colunas)
 {
     pgbest = memoria.allocaVetorD(colunas);
 }
+/****************************************************/
 void pso::setJPibest(int colunas)
 {
     jPibest = memoria.allocaVetorD(colunas);
 }
+/****************************************************/
 void pso::setJPgbest(double _jPgbest)
 {
     jPgbest = _jPgbest;
 }
+/****************************************************/
 void pso::setC1(double _c1)
 {
     c1 = _c1;
 }
+/****************************************************/
 void pso::setC2(double _c2)
 {
     c2 = _c2;
 }
+/****************************************************/
 void pso::setW(double _w)
 {
     w = _w;
 }
+/****************************************************/
 void pso::setParticulas(int _particulas)
 {
     particulas = _particulas;
 }
+/****************************************************/
 void pso::setIncognitas(int _incognitas)
 {
     incognitas = _incognitas;
 }
+/****************************************************/
 void pso::setIteracoes(int _iteracoes)
 {
     iteracoes = _iteracoes;
