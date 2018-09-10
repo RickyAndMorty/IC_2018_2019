@@ -191,40 +191,40 @@ int main()
     enxame.setJPibest(particulas);//Aloca o vetor JPibest
     //cout << "Particulas" << " " << enxame.getParticulas() << endl;
 
-    resultado.setSnir(enxame.getIteracoes(),ocdma.getUsuarios());
-    resultado.setUsers(ocdma.getUsuarios());
-    resultado.setPgbest(enxame.getIteracoes(),ocdma.getUsuarios());
+    resultado.setSnir(enxame.getIteracoes(),ocdma.getUsuarios());//Aloca a matriz auxiliar SNIR
+    resultado.setUsers(ocdma.getUsuarios());//seta a quantidade de usuários da rede, no objeto auxiliar
+    resultado.setPgbest(enxame.getIteracoes(),ocdma.getUsuarios());//Aloca a matriz Pgbest, auxiliar
 
-    resultado.setPower(enxame.getIteracoes());
+    resultado.setPower(enxame.getIteracoes());//Vetor que guarda a potência média consumida em cada iteração
 
 
 
-    enxame.calculaPosicao();
-    enxame.calculaPibest();
-    enxame.calculaPgbest();
+    enxame.calculaPosicao();//Método que calcula a posição das particulas
+    enxame.calculaPibest();// Metodo que calcula a melhor posição local de cada particula
+    enxame.calculaPgbest();//Metodo que calcula a melhor posição global de cada particula
     enxame.calculaG(ocdma.getH());
-    enxame.calculaSnir(ocdma.getSigma(),ocdma.getG_t());
-    enxame.calculaFth(ocdma.getSnirTarget());
-    enxame.fitness(ocdma.getPmax());
+    enxame.calculaSnir(ocdma.getSigma(),ocdma.getG_t());//Metodo que calcula a SNIR
+    enxame.calculaFth(ocdma.getSnirTarget());// Metodo que verifica a evolução do exame de partículas
+    enxame.fitness(ocdma.getPmax());//Metodo que calcula a função fitness
     /************Aqui começa as iterações do algoritmo PSO*************************/
-    for(int i = 0; i < enxame.getIteracoes(); i ++)
+    for(int i = 0; i < enxame.getIteracoes(); i ++)// Laço que será executado em função do número de iterações
     {
-        enxame.calculaSnir(ocdma.getSigma(),ocdma.getG_t());
-        enxame.calculaFth(ocdma.getSnirTarget());
-        enxame.fitness(ocdma.getPmax());
-        enxame.bestLocal();
-        enxame.bestGlobal();
-        enxame.speed();
-        enxame.speedBounds(ocdma.getVmin(), ocdma.getVmax());
-        enxame.populationUpdate();
-        enxame.powerBounds(ocdma.getPmin(),ocdma.getPmax());
-        resultado.salvarSNIR(enxame.getPgbest(),enxame.getG(),ocdma.getG_t(),ocdma.getSigma(),i,ocdma.getUsuarios());
-        resultado.salvarPgbest(enxame.getPgbest(),i);
+        enxame.calculaSnir(ocdma.getSigma(),ocdma.getG_t());//Metodo que calcula a SNIR
+        enxame.calculaFth(ocdma.getSnirTarget());// Metodo que verifica a evolução do exame de partículas
+        enxame.fitness(ocdma.getPmax());//Metodo que calcula a função fitness
+        enxame.bestLocal();// Método que calcula a melhor posição local
+        enxame.bestGlobal();//Método que calcula a melhor posição global
+        enxame.speed();//Método que calcula a velocidade das partículas (equação principal do pso)
+        enxame.speedBounds(ocdma.getVmin(), ocdma.getVmax());// Método que limita a velocidade de cada particula do pso
+        enxame.populationUpdate();//Método que atualiza a posição das particulas do pso
+        enxame.powerBounds(ocdma.getPmin(),ocdma.getPmax());//Método que limita a posição de cada particula do pso no espaço de busca
+        resultado.salvarSNIR(enxame.getPgbest(),enxame.getG(),ocdma.getG_t(),ocdma.getSigma(),i,ocdma.getUsuarios());//Método que salva o resultado da SNIR em cada iteração
+        resultado.salvarPgbest(enxame.getPgbest(),i);// Método que salva a posição global das particulas em cada iteração
 
-        resultado.salvarPower(enxame.getPgbest(),i,ocdma.getUsuarios());
+        resultado.salvarPower(enxame.getPgbest(),i,ocdma.getUsuarios());//Método que salva a potência média consumida em cada iteração 
         cout << "i = " << " " << i << endl;
     }
-    resultado.gravarSnir(resultado.getSnir(),enxame.getIteracoes(),ocdma.getUsuarios());
+    resultado.gravarSnir(resultado.getSnir(),enxame.getIteracoes(),ocdma.getUsuarios());//Método que grava a SNIR em um arquivo.txt ou arquivo.bin
     resultado.gravarPgbest(resultado.getPgbest(),enxame.getIteracoes());
     calculaSNR(_snir,enxame.getSnir(),ocdma.getUsuarios(),enxame.getParticulas());
     cout << "Posicao" << " " << endl;
