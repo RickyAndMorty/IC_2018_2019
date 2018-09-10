@@ -225,16 +225,16 @@ int main()
         cout << "i = " << " " << i << endl;
     }
     resultado.gravarSnir(resultado.getSnir(),enxame.getIteracoes(),ocdma.getUsuarios());//Método que grava a SNIR em um arquivo.txt ou arquivo.bin
-    resultado.gravarPgbest(resultado.getPgbest(),enxame.getIteracoes());
-    calculaSNR(_snir,enxame.getSnir(),ocdma.getUsuarios(),enxame.getParticulas());
+    resultado.gravarPgbest(resultado.getPgbest(),enxame.getIteracoes());//Método que grava a matriz Pgbest em um arquivo.txt ou arquivo.bin
+    calculaSNR(_snir,enxame.getSnir(),ocdma.getUsuarios(),enxame.getParticulas());//Método que transforma a snir em dB
     cout << "Posicao" << " " << endl;
     print.imprimir1DD(_snir,ocdma.getUsuarios());
 
-    resultado.gravarSnirdB(_snir,ocdma.getUsuarios());
+    resultado.gravarSnirdB(_snir,ocdma.getUsuarios());//Método para gravar a snir em dB
 
-    resultado.gravarPower(resultado.getPower(),enxame.getIteracoes());
+    resultado.gravarPower(resultado.getPower(),enxame.getIteracoes());// Método para gravar a potência média consumida pelas ONUs
 
-    resultado.gravarConstantes(enxame.getC1(),enxame.getC2(),enxame.getW());
+    resultado.gravarConstantes(enxame.getC1(),enxame.getC2(),enxame.getW());// Metodo para gravar as constantes encontradas
     //cout << " " << RAND_MAX << endl;
     return 0;
 }
