@@ -112,15 +112,15 @@ int main()
     rede ocdma;// Objeto do tipo rede OCDMA
     pso enxame;// Objeto do tipo pso, que representa as características do algoritmo
     imprimir print;
-    resultados resultado;
+    resultados resultado; // Objeto que guardará as iterações do algoritmo
     ocdma.setUsuarios(64);// Configura a rede com 64 usuários
 
     cout << "Usuarios: " << " " << ocdma.getUsuarios() << endl;
     ocdma.setGamp(100.00);// Configura os ganhos do amplificador
     cout << "Gamp: " << " " << ocdma.getGamp() << endl;
-    ocdma.setA_star(0.0016);//
+    ocdma.setA_star(0.0016);//Configura as perdas do acoplador em estrela 
     cout << "A_star: " << " " << ocdma.getA_star() << endl;
-    ocdma.setAlfa(0.0416);
+    ocdma.setAlfa(0.0416);//Configura a perda por propagação na fibra
     cout << "Alfa: " << " " << ocdma.getAlfa() << endl;
     ocdma.setPmax(0.0100);// Configura a potência mínima de transmissão
     cout << "Pmax: " << " " << ocdma.getPmax() << endl;
@@ -132,7 +132,7 @@ int main()
     cout << "Vmin: " << " " << ocdma.getVmin() << endl;
     ocdma.setSnirTarget(1.5259*pow(10.00,-5.00));//Configura a relação sinal-ruído target
     cout << "SnirTarget: " << " " << ocdma.getSnirTarget() << endl;
-    // Interferência
+    // Calcula a interferência
     ocdma.setSigma(2 * (ocdma.getGamp() - 1.00) * 193.0 * pow(10.00,12.00) * 100.00 * pow(10.00,9.00) * 6.63 * pow(10.00,-34.00));// Configura a interferência
     cout << "Sigma: " << " " << ocdma.getSigma() << endl;
 
@@ -172,26 +172,26 @@ int main()
 
     enxame.setPosicao(ocdma.getUsuarios(), particulas);// Configura a posição das partículas
 
-    enxame.setG(ocdma.getUsuarios(),ocdma.getUsuarios());
+    enxame.setG(ocdma.getUsuarios(),ocdma.getUsuarios());//Aloca a matriz G
 
-    enxame.setFth(ocdma.getUsuarios(), particulas);//
+    enxame.setFth(ocdma.getUsuarios(), particulas);//Aloca a matriz Fth
 
     enxame.setVelocidade(ocdma.getUsuarios(), particulas);// Configura a matriz de velocidades do PSO
 
     enxame.setPibest(ocdma.getUsuarios(), particulas);// Configura a matriz dos melhores locais do PSO
 
-    enxame.setGii(ocdma.getUsuarios());
+    enxame.setGii(ocdma.getUsuarios());//Aloca o vetor Gii
 
-    enxame.setF(ocdma.getUsuarios());
+    enxame.setF(ocdma.getUsuarios());//Aloca o vetor F
 
-    enxame.setPgbest(ocdma.getUsuarios());// Configura os melhores globais do PSO
+    enxame.setPgbest(ocdma.getUsuarios());// Aloca o vetor Pgbest
 
-    enxame.setJp(particulas);
+    enxame.setJp(particulas);//Aloca o vetor Jp
 
-    enxame.setJPibest(particulas);
+    enxame.setJPibest(particulas);//Aloca o vetor JPibest
     //cout << "Particulas" << " " << enxame.getParticulas() << endl;
 
-    resultado.setSnir(enxame.getIteracoes(),ocdma.getUsuarios());// Objeto que guardará as iterações do algoritmo
+    resultado.setSnir(enxame.getIteracoes(),ocdma.getUsuarios());
     resultado.setUsers(ocdma.getUsuarios());
     resultado.setPgbest(enxame.getIteracoes(),ocdma.getUsuarios());
 
