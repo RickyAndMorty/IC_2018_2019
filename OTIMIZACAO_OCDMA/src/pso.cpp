@@ -109,18 +109,22 @@ double** pso::getSnir()
 {
     return snir;
 }
+/****************************************************/
 double** pso::getPosicao()
 {
     return posicao;
 }
+/****************************************************/
 double** pso::getVelocidade()
 {
     return velocidade;
 }
+/****************************************************/
 double** pso::getG()
 {
     return G;
 }
+/****************************************************/
 double** pso::getPibest()
 {
     return pibest;
