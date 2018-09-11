@@ -417,6 +417,8 @@ void pso::speed()
     rand1 = randomica(rand1);
     rand2 = randomica(rand2);
     //imprimir print;
+    time_t t;
+	srand((unsigned) time(&t));
     for(i = 0; i < incognitas; i ++)
     {
         for(j = 0; j < particulas; j ++)

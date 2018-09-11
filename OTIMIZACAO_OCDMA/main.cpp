@@ -88,7 +88,18 @@ void distancia(double* Ltx_i)
     Ltx_i[62] = 36.7481;
     Ltx_i[63] = 39.7142;
 }
-
+int verificaSNIR(double* snir, int users)
+{
+    int i;
+    for(i = 0; i < users; i ++)
+    {
+        if((snir[i] < 20.00) || (snir[i] > 21.00))
+        {
+            return 0;
+        }
+    }
+    return 1;
+}
 int main()
 {
     double Ltx[64];// Vetor de distâcias entre acoplador estrela e ONUs
@@ -213,6 +224,8 @@ int main()
         resultado.salvarPower(enxame.getPgbest(),i,ocdma.getUsuarios());//Método que salva a potência média consumida em cada iteração
         cout << "i = " << " " << i << endl;
     }
+
+
     resultado.gravarSnir(resultado.getSnir(),enxame.getIteracoes(),ocdma.getUsuarios());//Método que grava a SNIR em um arquivo.txt ou arquivo.bin
     resultado.gravarPgbest(resultado.getPgbest(),enxame.getIteracoes());//Método que grava a matriz Pgbest em um arquivo.txt ou arquivo.bin
     calculaSNR(_snir,enxame.getSnir(),ocdma.getUsuarios(),enxame.getParticulas());//Método que transforma a snir em dB
@@ -224,7 +237,9 @@ int main()
     resultado.gravarPower(resultado.getPower(),enxame.getIteracoes());// Método para gravar a potência média consumida pelas ONUs
 
     resultado.gravarConstantes(enxame.getC1(),enxame.getC2(),enxame.getW());// Metodo para gravar as constantes encontradas
-        cout << "Constantes"  << endl;
+    cout << "Constantes"  << endl;
+
+    cout << verificaSNIR(_snir,ocdma.getUsuarios()) << endl;
     cout << enxame.getC1()  << endl;
     cout << enxame.getC2()  << endl;
     return 0;
