@@ -129,60 +129,73 @@ double** pso::getPibest()
 {
     return pibest;
 }
+/****************************************************/
 double** pso::getFth()
 {
     return fth;
 }
+/****************************************************/
 double* pso::getGii()
 {
     return Gii;
 }
+/****************************************************/
 double* pso::getF()
 {
     return F;
 }
+/****************************************************/
 double* pso::getJp()
 {
     return jP;
 }
+/****************************************************/
 double* pso::getPgbest()
 {
     return pgbest;
 }
+/****************************************************/
 double* pso::getJPibest()
 {
     return jPibest;
 }
+/****************************************************/
 double pso::getJPgbest()
 {
     return jPgbest;
 }
+/****************************************************/
 double pso::getC1()
 {
     return c1;
 }
+/****************************************************/
 double pso::getC2()
 {
     return c2;
 }
+/****************************************************/
 double pso::getW()
 {
     return w;
 }
+/****************************************************/
 int pso::getParticulas()
 {
     return particulas;
 }
+/****************************************************/
 int pso::getIncognitas()
 {
     return incognitas;
 }
+/****************************************************/
 int pso::getIteracoes()
 {
     return iteracoes;
 }
 
-
+/****************************************************/
 void pso::calculaPosicao()
 {
     int i,j;
@@ -197,6 +210,7 @@ void pso::calculaPosicao()
     }
 
 }
+/****************************************************/
 void pso::calculaPibest()
 {
     int i,j;
@@ -208,6 +222,7 @@ void pso::calculaPibest()
         }
     }
 }
+/****************************************************/
 void pso::calculaPgbest()
 {
     int i;
@@ -216,7 +231,7 @@ void pso::calculaPgbest()
         pgbest[i] = (((double)(rand())) / RAND_MAX) / 100.00F;//pso->Pmax;
     }
 }
-
+/****************************************************/
 void pso::calculaG(double** h)
 {
     int i,j;
@@ -235,7 +250,7 @@ void pso::calculaG(double** h)
         }
     }
 }
-
+/****************************************************/
 void pso::calculaSnir(double sigma, double* g_t)
 {
     int i,j,z;
@@ -253,7 +268,7 @@ void pso::calculaSnir(double sigma, double* g_t)
         }
     }
 }
-
+/****************************************************/
 void pso::calculaFth(double snir_target)
 {
     int i,j;
@@ -272,7 +287,7 @@ void pso::calculaFth(double snir_target)
         }
     }
 }
-
+/****************************************************/
 void pso::fitness(double pmax)
 {
     int i,j;
@@ -305,7 +320,7 @@ void pso::fitness(double pmax)
     aux1 = memoria.liberaMatrizD(aux1,incognitas);
     aux2 = memoria.liberaVetorD(aux2);
 }
-
+/****************************************************/
 void pso::insertionSort(double* jP, double * MaxJ, int* idx, int M)
 {
     int i,j;
@@ -338,6 +353,7 @@ void pso::insertionSort(double* jP, double * MaxJ, int* idx, int M)
         idx[i] = j;
     }
 }
+/****************************************************/
 void pso::bestLocal()
 {
     int i,j;
@@ -353,7 +369,7 @@ void pso::bestLocal()
         }
     }
 }
-
+/****************************************************/
 void pso::bestGlobal()
 {
     int i;
@@ -373,7 +389,7 @@ void pso::bestGlobal()
     MaxJ = memoria.liberaVetorD(MaxJ);
     idx = memoria.liberaVetorI(idx);
 }
-
+/****************************************************/
 double** pso::randomica(double** matriz)
 {
     int i,j;
@@ -389,7 +405,7 @@ double** pso::randomica(double** matriz)
     return matriz;
 }
 
-
+/****************************************************/
 void pso::speed()
 {
     int i,j;
@@ -414,6 +430,7 @@ void pso::speed()
     rand1 = memoria.liberaMatrizD(rand1, incognitas);
     rand2 = memoria.liberaMatrizD(rand2, incognitas);
 }
+/****************************************************/
 void pso::speedBounds(double vmin, double vmax)
 {
     int i,j;
@@ -432,6 +449,7 @@ void pso::speedBounds(double vmin, double vmax)
         }
     }
 }
+/****************************************************/
 void pso::populationUpdate()
 {
     int i,j;
@@ -443,6 +461,7 @@ void pso::populationUpdate()
         }
     }
 }
+/****************************************************/
 void pso::powerBounds(double pmin, double pmax)
 {
     int i,j;
