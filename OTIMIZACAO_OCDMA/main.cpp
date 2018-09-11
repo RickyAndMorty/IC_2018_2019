@@ -7,6 +7,7 @@
 #include <resultados.h>
 #include <math.h>
 #include <time.h>
+#include "randomica.c"
 
 using namespace std;
 // Função que converte potência em dB
@@ -87,21 +88,7 @@ void distancia(double* Ltx_i)
     Ltx_i[62] = 36.7481;
     Ltx_i[63] = 39.7142;
 }
-//função para gerar uma constante aleatória
-double constates1()
-{
-    double constante = 0.00;
-    srand((unsigned) time(0));
-    constante = 1.00 + ((double)(rand()))/RAND_MAX;//2.0
-    return constante;
-}
-double constates2()
-{
-    double constante = 0.00;
-    srand((unsigned) time(0));
-    constante = 1.00 + ((double)(rand()))/RAND_MAX;//2.0
-    return constante;
-}
+
 int main()
 {
     double Ltx[64];// Vetor de distâcias entre acoplador estrela e ONUs
@@ -118,7 +105,7 @@ int main()
     cout << "Usuarios: " << " " << ocdma.getUsuarios() << endl;
     ocdma.setGamp(100.00);// Configura os ganhos do amplificador
     cout << "Gamp: " << " " << ocdma.getGamp() << endl;
-    ocdma.setA_star(0.0016);//Configura as perdas do acoplador em estrela 
+    ocdma.setA_star(0.0016);//Configura as perdas do acoplador em estrela
     cout << "A_star: " << " " << ocdma.getA_star() << endl;
     ocdma.setAlfa(0.0416);//Configura a perda por propagação na fibra
     cout << "Alfa: " << " " << ocdma.getAlfa() << endl;
@@ -159,9 +146,11 @@ int main()
     print.imprimir2DD(ocdma.getH(),ocdma.getUsuarios(),ocdma.getUsuarios());*/
 
 /*****************************AQUI COMEÇA OS MÉTODOS DO PSO********************************************************/
+    time_t t;
+	srand((unsigned) time(&t));
 
-    enxame.setC1(constates1());//Configura a constante de aceleração local
-    enxame.setC2(constates2());//Configura a constante de aceleração global
+    enxame.setC1(constante1());//Configura a constante de aceleração local
+    enxame.setC2(constante2());//Configura a constante de aceleração global
     //enxame.setW(0.812214);
     enxame.setJPgbest(0.00);//
     enxame.setIteracoes(1800);// Configura o número de iteraçãoes
@@ -221,7 +210,7 @@ int main()
         resultado.salvarSNIR(enxame.getPgbest(),enxame.getG(),ocdma.getG_t(),ocdma.getSigma(),i,ocdma.getUsuarios());//Método que salva o resultado da SNIR em cada iteração
         resultado.salvarPgbest(enxame.getPgbest(),i);// Método que salva a posição global das particulas em cada iteração
 
-        resultado.salvarPower(enxame.getPgbest(),i,ocdma.getUsuarios());//Método que salva a potência média consumida em cada iteração 
+        resultado.salvarPower(enxame.getPgbest(),i,ocdma.getUsuarios());//Método que salva a potência média consumida em cada iteração
         cout << "i = " << " " << i << endl;
     }
     resultado.gravarSnir(resultado.getSnir(),enxame.getIteracoes(),ocdma.getUsuarios());//Método que grava a SNIR em um arquivo.txt ou arquivo.bin
@@ -235,6 +224,8 @@ int main()
     resultado.gravarPower(resultado.getPower(),enxame.getIteracoes());// Método para gravar a potência média consumida pelas ONUs
 
     resultado.gravarConstantes(enxame.getC1(),enxame.getC2(),enxame.getW());// Metodo para gravar as constantes encontradas
-    //cout << " " << RAND_MAX << endl;
+        cout << "Constantes"  << endl;
+    cout << enxame.getC1()  << endl;
+    cout << enxame.getC2()  << endl;
     return 0;
 }
