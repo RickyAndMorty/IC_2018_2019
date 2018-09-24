@@ -195,7 +195,7 @@ int pso::getIteracoes()
     return iteracoes;
 }
 
-/****************************************************/
+/*******************Calcula a posição inicial de maneira randômica das partículas*********************************/
 void pso::calculaPosicao()
 {
     int i,j;
@@ -210,7 +210,7 @@ void pso::calculaPosicao()
     }
 
 }
-/****************************************************/
+/*****************Parte do principio que as partículas estão distribuidas randomicamente incialmente***********************************/
 void pso::calculaPibest()
 {
     int i,j;
@@ -222,7 +222,7 @@ void pso::calculaPibest()
         }
     }
 }
-/****************************************************/
+/******************Seta a posição das partículas aleatóriamente, no inicio**********************************/
 void pso::calculaPgbest()
 {
     int i;

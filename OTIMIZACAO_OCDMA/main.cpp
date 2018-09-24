@@ -106,7 +106,7 @@ int main()
     double Ltx[64];// Vetor de distâcias entre acoplador estrela e ONUs
     double _snir[64];
     distancia(Ltx);
-    int particulas = 66;// Quantidade de partículas do PSO
+    int particulas = 128;// Quantidade de partículas do PSO
     int cont = 0;
 
     rede ocdma;// Objeto do tipo rede OCDMA
