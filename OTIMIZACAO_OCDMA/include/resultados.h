@@ -20,14 +20,15 @@ class resultados
     double** getSnir();
     double** getPgbest();
     double* getPower();
+
+
+
     void salvarSNIR(double* pgbest, double** G, double* g_t, double sigma,int iteration, int users);
     void salvarPgbest(double* _pgbest, int z);
-
     void salvarPower(double* pgbest,int iteration, int users);
+
     void gravarPower(double* _power, int users);
-
     void gravarSnir(double** matriz, int linhas, int colunas);
-
     void gravarPgbest(double** pgbest, int iterations);
     void gravarSnirdB(double* _snir, int users);
     void gravarConstantes(double c1,double c2, double w);
