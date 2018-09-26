@@ -55,38 +55,6 @@ void distancia(double* Ltx_i)
     Ltx_i[29] = 26.3720;
     Ltx_i[30] = 26.7481;
     Ltx_i[31] = 19.7142;
-    Ltx_i[32] = 27.3182;
-    Ltx_i[33] = 5.2198;
-    Ltx_i[34] = 6.6824;
-    Ltx_i[35] = 7.5307;
-    Ltx_i[36] = 20.2101;
-    Ltx_i[37] = 8.0123;
-    Ltx_i[38] = 9.8661;
-    Ltx_i[39] = 12.3720;
-    Ltx_i[40] = 11.7481;
-    Ltx_i[41] = 13.7142;
-    Ltx_i[42] = 7.3182;
-    Ltx_i[43] = 13.2198;
-    Ltx_i[44] = 12.6824;
-    Ltx_i[45] = 38.5307;
-    Ltx_i[46] = 48.2101;
-    Ltx_i[47] = 36.0123;
-    Ltx_i[48] = 4.8661;
-    Ltx_i[49] = 6.3720;
-    Ltx_i[50] = 27.7481;
-    Ltx_i[51] = 15.7142;
-    Ltx_i[52] = 24.3182;
-    Ltx_i[53] = 41.2198;
-    Ltx_i[54] = 14.6824;
-    Ltx_i[55] = 8.5307;
-    Ltx_i[56] = 10.2101;
-    Ltx_i[57] = 20.0123;
-    Ltx_i[58] = 30.8661;
-    Ltx_i[59] = 6.3720;
-    Ltx_i[60] = 46.7481;
-    Ltx_i[61] = 29.7142;
-    Ltx_i[62] = 36.7481;
-    Ltx_i[63] = 39.7142;
 }
 int verificaSNIR(double* snir, int users)
 {
@@ -222,10 +190,10 @@ int main()
             enxame.speedBounds(ocdma.getVmin(), ocdma.getVmax());// Método que limita a velocidade de cada particula do pso
             enxame.populationUpdate();//Método que atualiza a posição das particulas do pso
             enxame.powerBounds(ocdma.getPmin(),ocdma.getPmax());//Método que limita a posição de cada particula do pso no espaço de busca
-            //resultado.salvarSNIR(enxame.getPgbest(),enxame.getG(),ocdma.getG_t(),ocdma.getSigma(),i,ocdma.getUsuarios());//Método que salva o resultado da SNIR em cada iteração
-            //resultado.salvarPgbest(enxame.getPgbest(),i);// Método que salva a posição global das particulas em cada iteração
+            resultado.salvarSNIR(enxame.getPgbest(),enxame.getG(),ocdma.getG_t(),ocdma.getSigma(),i,ocdma.getUsuarios());//Método que salva o resultado da SNIR em cada iteração
+            resultado.salvarPgbest(enxame.getPgbest(),i);// Método que salva a posição global das particulas em cada iteração
 
-            //resultado.salvarPower(enxame.getPgbest(),i,ocdma.getUsuarios());//Método que salva a potência média consumida em cada iteração
+            resultado.salvarPower(enxame.getPgbest(),i,ocdma.getUsuarios());//Método que salva a potência média consumida em cada iteração
 
         }
         calculaSNR(_snir,enxame.getSnir(),ocdma.getUsuarios(),enxame.getParticulas());//Método que transforma a snir em dB
@@ -233,15 +201,15 @@ int main()
     //}while(verificaSNIR(_snir,ocdma.getUsuarios()));
 
 
-    //resultado.gravarSnir(resultado.getSnir(),enxame.getIteracoes(),ocdma.getUsuarios());//Método que grava a SNIR em um arquivo.txt ou arquivo.bin
-    //resultado.gravarPgbest(resultado.getPgbest(),enxame.getIteracoes());//Método que grava a matriz Pgbest em um arquivo.txt ou arquivo.bin
+    resultado.gravarSnir(resultado.getSnir(),enxame.getIteracoes(),ocdma.getUsuarios());//Método que grava a SNIR em um arquivo.txt ou arquivo.bin
+    resultado.gravarPgbest(resultado.getPgbest(),enxame.getIteracoes());//Método que grava a matriz Pgbest em um arquivo.txt ou arquivo.bin
 
     cout << "Posicao" << " " << endl;
     print.imprimir1DD(_snir,ocdma.getUsuarios());
 
-    //resultado.gravarSnirdB(_snir,ocdma.getUsuarios());//Método para gravar a snir em dB
+    resultado.gravarSnirdB(_snir,ocdma.getUsuarios());//Método para gravar a snir em dB
 
-    //resultado.gravarPower(resultado.getPower(),enxame.getIteracoes());// Método para gravar a potência média consumida pelas ONUs
+    resultado.gravarPower(resultado.getPower(),enxame.getIteracoes());// Método para gravar a potência média consumida pelas ONUs
 
     resultado.gravarConstantes(enxame.getC1(),enxame.getC2(),enxame.getW());// Metodo para gravar as constantes encontradas
     cout << "Constantes"  << endl;

@@ -92,7 +92,39 @@ Ltx_i= [48.8779
     34.8661
     26.3720
     26.7481
-    19.7142]';
+    19.7142
+    27.3182
+    5.2198
+    6.6824
+    7.5307
+    20.2101
+    8.0123
+    9.8661
+    12.3720
+    11.7481
+    13.7142
+    7.3182
+    13.2198
+    12.6824
+    38.5307
+    48.2101
+    36.0123
+    4.8661
+    6.3720
+    27.7481
+    15.7142
+    24.3182
+    41.2198
+    14.6824
+    8.5307
+    10.2101
+    20.0123
+    30.8661
+    6.3720
+    46.7481
+    29.7142
+    36.7481;
+     39.7142]';
 
 %Lrx_i=unifrnd(rmin, rmax, 1, K);%comprimento das fibras rx
 Lrx_i=[32.0586
@@ -172,7 +204,7 @@ end
 % fclose(arquivo);
 % clear arquivo
 
-arquivo = fopen('C:/git/IC_2018_2019/OTIMIZACAO_OCDMA_32x64/resultados/SNIRdB.bin');
+arquivo = fopen('C:/git/IC_2018_2019/OTIMIZACAO_OCDMA/resultados/SNIRdB.bin');
 % A = fscanf(arquivo,'%f',[colunas linhas]);
 SNIRdb = fscanf(arquivo,'%f');
 fclose(arquivo);
@@ -185,7 +217,7 @@ clear arquivo
 % clear arquivo ans
 
 
-arquivo = fopen('C:/git/IC_2018_2019/OTIMIZACAO_OCDMA_32x64/resultados/SNIR.bin');
+arquivo = fopen('C:/git/IC_2018_2019/OTIMIZACAO_OCDMA/resultados/SNIR.bin');
 % A = fscanf(arquivo,'%f',[colunas linhas]);
 sniraux = fscanf(arquivo,'%f',[K iteracoes]);
 fclose(arquivo);
@@ -193,7 +225,7 @@ clear arquivo ans
 
 
 
-arquivo = fopen('C:/git/IC_2018_2019/OTIMIZACAO_OCDMA_32x64/resultados/Pgbest.bin');
+arquivo = fopen('C:/git/IC_2018_2019/OTIMIZACAO_OCDMA/resultados/Pgbest.bin');
 % A = fscanf(arquivo,'%f',[colunas linhas]);
 bestaux = fscanf(arquivo,'%f',[K iteracoes]);
 fclose(arquivo);

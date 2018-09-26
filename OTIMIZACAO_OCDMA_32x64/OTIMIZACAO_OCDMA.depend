@@ -103,3 +103,64 @@
 	<stdlib.h>
 	<time.h>
 
+1537921199 source:c:\git\ic_2018_2019\otimizacao_ocdma_32x64\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<rede.h>
+	<pso.h>
+	<imprimir.h>
+	<resultados.h>
+	<math.h>
+	<time.h>
+	"randomica.c"
+
+1535442538 c:\git\ic_2018_2019\otimizacao_ocdma_32x64\include\rede.h
+	"alloca.h"
+
+1535442538 c:\git\ic_2018_2019\otimizacao_ocdma_32x64\include\alloca.h
+
+1535900711 c:\git\ic_2018_2019\otimizacao_ocdma_32x64\include\pso.h
+	"alloca.h"
+
+1535442538 c:\git\ic_2018_2019\otimizacao_ocdma_32x64\include\imprimir.h
+
+1537904411 c:\git\ic_2018_2019\otimizacao_ocdma_32x64\include\resultados.h
+	<alloca.h>
+	<stdio.h>
+	<stdlib.h>
+
+1536684122 c:\git\ic_2018_2019\otimizacao_ocdma_32x64\randomica.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1535582891 source:c:\git\ic_2018_2019\otimizacao_ocdma_32x64\src\alloca.cpp
+	"alloca.h"
+	<stdio.h>
+	<stdlib.h>
+
+1536145698 source:c:\git\ic_2018_2019\otimizacao_ocdma_32x64\src\imprimir.cpp
+	"imprimir.h"
+	<iostream>
+	<math.h>
+	<stdlib.h>
+	<stdio.h>
+
+1537920801 source:c:\git\ic_2018_2019\otimizacao_ocdma_32x64\src\pso.cpp
+	"pso.h"
+	<time.h>
+	<stdio.h>
+	<stdlib.h>
+	<imprimir.h>
+
+1535442538 source:c:\git\ic_2018_2019\otimizacao_ocdma_32x64\src\rede.cpp
+	"rede.h"
+	<math.h>
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+
+1537921364 source:c:\git\ic_2018_2019\otimizacao_ocdma_32x64\src\resultados.cpp
+	"resultados.h"
+
