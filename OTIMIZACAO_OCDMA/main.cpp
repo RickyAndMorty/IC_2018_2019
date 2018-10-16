@@ -113,7 +113,7 @@ int main()
     pso enxame;// Objeto do tipo pso, que representa as características do algoritmo
     imprimir print;
     resultados resultado; // Objeto que guardará as iterações do algoritmo
-    ocdma.setUsuarios(32);// Configura a rede com 64 usuários
+    ocdma.setUsuarios(32);// Configura a rede com 32 usuários
 
     cout << "Usuarios: " << " " << ocdma.getUsuarios() << endl;
     ocdma.setGamp(100.00);// Configura os ganhos do amplificador
