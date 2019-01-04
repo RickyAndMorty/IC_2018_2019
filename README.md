@@ -6,4 +6,4 @@ Artificial Intelligence (AI) is an extensive scientific discipline which enables
 
 A stride forward towards making agents more intelligent comes by incorporating the use of knowledge, reasoning and planning. In this case, intelligent agents keep a knowledge base (KB) where relevant knowledge about the environment and about the impact of their actions is stored. 
 
-This approach utilizes the PSO (Particle Swarm Optimization Algorithm) to solve the problem of resource allocation in passive optical networks.
+This approach utilizes the PSO (Particle Swarm Optimization Algorithm) to solve the problem of resource allocation in passive optical networks, and then, improve the Quality of Service (QoS) and the global consumption of power. 
