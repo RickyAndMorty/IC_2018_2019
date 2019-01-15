@@ -103,3 +103,47 @@
 	<stdlib.h>
 	<time.h>
 
+1546888293 source:/home/ricardo/Desktop/IC_2018_2019/OTIMIZACAO_OCDMA/src/alloca.cpp
+	"alloca.h"
+	<stdio.h>
+	<stdlib.h>
+
+1546888293 /home/ricardo/Desktop/IC_2018_2019/OTIMIZACAO_OCDMA/include/alloca.h
+
+1546888293 source:/home/ricardo/Desktop/IC_2018_2019/OTIMIZACAO_OCDMA/src/imprimir.cpp
+	"imprimir.h"
+	<iostream>
+	<math.h>
+	<stdlib.h>
+	<stdio.h>
+
+1546888293 /home/ricardo/Desktop/IC_2018_2019/OTIMIZACAO_OCDMA/include/imprimir.h
+
+1546888293 source:/home/ricardo/Desktop/IC_2018_2019/OTIMIZACAO_OCDMA/src/pso.cpp
+	"pso.h"
+	<time.h>
+	<stdio.h>
+	<stdlib.h>
+	<imprimir.h>
+
+1546888293 /home/ricardo/Desktop/IC_2018_2019/OTIMIZACAO_OCDMA/include/pso.h
+	"alloca.h"
+
+1546888293 source:/home/ricardo/Desktop/IC_2018_2019/OTIMIZACAO_OCDMA/src/rede.cpp
+	"rede.h"
+	<math.h>
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+
+1546888293 /home/ricardo/Desktop/IC_2018_2019/OTIMIZACAO_OCDMA/include/rede.h
+	"alloca.h"
+
+1546888293 source:/home/ricardo/Desktop/IC_2018_2019/OTIMIZACAO_OCDMA/src/resultados.cpp
+	"resultados.h"
+
+1546888293 /home/ricardo/Desktop/IC_2018_2019/OTIMIZACAO_OCDMA/include/resultados.h
+	<alloca.h>
+	<stdio.h>
+	<stdlib.h>
+

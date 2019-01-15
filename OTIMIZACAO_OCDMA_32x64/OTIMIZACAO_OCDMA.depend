@@ -164,3 +164,47 @@
 1537921364 source:c:\git\ic_2018_2019\otimizacao_ocdma_32x64\src\resultados.cpp
 	"resultados.h"
 
+1546888293 source:/home/ricardo/Desktop/IC_2018_2019/OTIMIZACAO_OCDMA_32x64/src/alloca.cpp
+	"alloca.h"
+	<stdio.h>
+	<stdlib.h>
+
+1546888293 /home/ricardo/Desktop/IC_2018_2019/OTIMIZACAO_OCDMA_32x64/include/alloca.h
+
+1546888293 source:/home/ricardo/Desktop/IC_2018_2019/OTIMIZACAO_OCDMA_32x64/src/imprimir.cpp
+	"imprimir.h"
+	<iostream>
+	<math.h>
+	<stdlib.h>
+	<stdio.h>
+
+1546888293 /home/ricardo/Desktop/IC_2018_2019/OTIMIZACAO_OCDMA_32x64/include/imprimir.h
+
+1546888293 source:/home/ricardo/Desktop/IC_2018_2019/OTIMIZACAO_OCDMA_32x64/src/pso.cpp
+	"pso.h"
+	<time.h>
+	<stdio.h>
+	<stdlib.h>
+	<imprimir.h>
+
+1546888293 /home/ricardo/Desktop/IC_2018_2019/OTIMIZACAO_OCDMA_32x64/include/pso.h
+	"alloca.h"
+
+1546888293 source:/home/ricardo/Desktop/IC_2018_2019/OTIMIZACAO_OCDMA_32x64/src/rede.cpp
+	"rede.h"
+	<math.h>
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+
+1546888293 /home/ricardo/Desktop/IC_2018_2019/OTIMIZACAO_OCDMA_32x64/include/rede.h
+	"alloca.h"
+
+1546888293 source:/home/ricardo/Desktop/IC_2018_2019/OTIMIZACAO_OCDMA_32x64/src/resultados.cpp
+	"resultados.h"
+
+1546888293 /home/ricardo/Desktop/IC_2018_2019/OTIMIZACAO_OCDMA_32x64/include/resultados.h
+	<alloca.h>
+	<stdio.h>
+	<stdlib.h>
+
