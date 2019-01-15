@@ -1,13 +1,13 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-#include <rede.h>
-#include <pso.h>
-#include <imprimir.h>
-#include <resultados.h>
+//#include <rede.h>
+//#include <pso.h>
+//#include <imprimir.h>
+//#include <resultados.h>
 #include <math.h>
 #include <time.h>
-#include "randomica.c"
+//#include "randomica.c"
 
 using namespace std;
 // Função que converte potência em dB
