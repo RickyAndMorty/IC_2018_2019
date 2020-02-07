@@ -1,16 +1,13 @@
 "# IC_2018_2019" 
 
-This work uses artificial intelligence (AI) to control the signal-to-noise ratio plus interference in next-generation passive optical networks (NG-PON)[1].
-
-Artificial Intelligence (AI) is an extensive scientific discipline which enables computer systems to solve problems by emulating complex biological proccess such as learning, reasoning and self-correction[1]. 
-
-A stride forward towards making agents more intelligent comes by incorporating the use of knowledge, reasoning and planning. In this case, intelligent agents keep a knowledge base (KB) where relevant knowledge about the environment and about the impact of their actions is stored[1]. 
-
-This approach utilizes the PSO (Particle Swarm Optimization Algorithm) to solve the problem of resource allocation in passive optical networks, and then, improve the Quality of Service (QoS) and the global consumption of power.
-
-PON is a key architecture for broadband access network and backhauling of mobile networks[2].
-
-[1] Javier, M.; de Miguel, I.; J. Durán, R.; Merayo, N.; Kuman Singh, S.; Jukan, A.; Chamania, M.; Artificial intelligence (AI) methods in optical networks: A comprehensive survey; Optical Switching and Networking, 2018.
-
-[2] Power Allocation in PON-OCDMA with Improved Chaos Particle Swarm Optimization. A. Santana, G.; R. Durand, F.; Abrão, T.; Journal of Microwaves, Optoelectronics and Electromagnetic Applications, 2018.
-
+Undergraduate research project, applying AI to enables computer systems to solve problems by emulating complex biological processes such as learning, reasoning and self-corrrection.
+Project: Adaptive resource allocation algorithms and energy efficiency mechanisms in next generation optical networks.
+Funding Institution: CNpq.
+Dedication: 20 hrs/week
+Activities:
+- Bibliographic review on monitoring techniques applied in optical networks.
+- NG-PON modeling using Matlab, C and C ++ programming language.
+- Study of computational intelligence techniques for resource allocation.
+- Development of resource allocation algorithms based on computational intelligence in order to increase energy efficiency.
+- Analysis of results and comparison with classical literature methods, using Matlab, C and C ++ programming language .
+- Preparation of reports and articles for submission.
